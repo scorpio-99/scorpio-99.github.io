@@ -1,1 +1,64 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Luca & Thuy</h1>
+        
+        <div class="message">
+            Every moment with you makes life more beautiful
+            <span class="heart">❤</span>
+        </div>
+
+        <div class="quote-carousel">
+            <p id="quote" class="quote"></p>
+        </div>
+
+        <div class="timeline">
+            <button class="nav-button prev" onclick="prevEvent()">❮</button>
+            <div class="timeline-item" id="current-event">
+                <div class="date" id="current-date"></div>
+                <div class="event" id="current-event-text"></div>
+            </div>
+            <button class="nav-button next" onclick="nextEvent()">❯</button>
+        </div>
+
+        <div class="counter">
+            <div class="time-block">
+                <div class="number" id="days">0</div>
+                <div class="label">Days</div>
+            </div>
+            <div class="time-block">
+                <div class="number" id="hours">0</div>
+                <div class="label">Hours</div>
+            </div>
+            <div class="time-block">
+                <div class="number" id="minutes">0</div>
+                <div class="label">Minutes</div>
+            </div>
+            <div class="time-block">
+                <div class="number" id="seconds">0</div>
+                <div class="label">Seconds</div>
+            </div>
+        </div>
+
+        <div class="music-player">
+            <h3>Our Song</h3>
+            <audio controls>
+                <source src="assets/adele.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script src="js/counter.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/hearts.js"></script>
+    <script src="js/timeline.js"></script>
+</body>
+</html>

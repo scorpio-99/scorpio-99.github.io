@@ -1,0 +1,20 @@
+.music-player {
+    margin: 0;
+    padding: 30px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.music-player h2 {
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.music-player audio {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+} 

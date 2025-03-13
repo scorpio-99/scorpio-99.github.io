@@ -1,5 +1,5 @@
 .music-player {
-    padding: 30px 0;
+    padding: var(--spacing-xl) 0;
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
@@ -7,5 +7,11 @@
 
 .music-player audio {
     width: 100%;
-    margin-top: 10px;
+    margin-top: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    transition: transform var(--transition-speed);
+}
+
+.music-player audio:hover {
+    transform: scale(1.02);
 } 

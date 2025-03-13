@@ -1,18 +1,24 @@
 .facts-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 10px;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-sm);
 }
 
 .fact {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
+    background: var(--color-overlay);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+.fact:hover {
+    background: var(--color-overlay-hover);
+    transform: scale(1.05);
 }
 
 .fact .number {
     font-size: 2.5em;
     font-weight: bold;
-    color: #ff4b6e;
+    color: var(--color-primary);
 } 

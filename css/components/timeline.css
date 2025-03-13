@@ -2,33 +2,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: var(--spacing-sm);
 }
 
 .timeline-item {
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    padding: var(--spacing-md);
+    background: var(--color-overlay);
+    border-radius: var(--border-radius-md);
     min-width: 200px;
     max-width: 100%;
+    transition: transform var(--transition-speed);
+}
+
+.timeline-item:hover {
+    background: var(--color-overlay-hover);
+    transform: scale(1.05);
 }
 
 .timeline-item .date {
-    color: #ff4b6e;
+    color: var(--color-primary);
     font-weight: bold;
-    padding-bottom: 10px;
+    padding-bottom: var(--spacing-sm);
     font-size: clamp(0.9em, 2.5vw, 1em);
 }
 
 .nav-button {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-overlay);
     border: none;
-    color: white;
+    color: var(--color-text);
     padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
     font-size: clamp(1em, 3vw, 1.2em);
     border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
 }
 
 .nav-button:hover {

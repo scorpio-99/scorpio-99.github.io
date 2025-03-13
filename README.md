@@ -1,11 +1,11 @@
-# Amore
+# Scorpio
 
-This is a static website hosted on GitHub Pages at [amore.lmeli.com](https://amore.lmeli.com).  
+This is a static website hosted on GitHub Pages at [amore.lmeli.com](http://amore.lmeli.com).  
 The project only consists of HTML, CSS, and JavaScript files due to technical limitations by GitHub Pages.
 
 ## Features
 - Static site powered by GitHub Pages
-- Custom domain: [amore.lmeli.com](https://amore.lmeli.com)
+- Custom domain: [amore.lmeli.com](http://amore.lmeli.com)
 - JavaScript-based data management (`js/data/data.js`)
 
 ## Deployment
@@ -17,3 +17,4 @@ This project is automatically deployed via GitHub Pages. Ensure your latest chan
 git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
 ```
 2. Open index.html in Browser.
+

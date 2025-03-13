@@ -1,12 +1,3 @@
-const specialPlaces = [
-    {
-        name: "First Date Location",
-        date: "24.02.2024",
-        coordinates: [51.0311, 7.0155], // Düsseldorf coordinates
-        description: "Where it all began..."
-    }
-];
-
 function initMap() {
     const map = L.map('map').setView([51.0311, 7.0155], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);

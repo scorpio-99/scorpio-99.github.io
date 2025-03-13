@@ -15,7 +15,7 @@
 
 .plan-status {
     font-size: 0.8em;
-    color: #ff4b6e;
+    color: var(--color-primary);
     margin-top: 5px;
 }
 

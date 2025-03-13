@@ -6,5 +6,5 @@
 }
 
 .heart {
-    color: #ff4b6e;
+    color: var(--color-primary);
 } 

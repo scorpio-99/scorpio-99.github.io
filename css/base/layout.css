@@ -12,7 +12,7 @@ body {
     padding: var(--spacing-lg);
     background: var(--color-overlay);
     border-radius: var(--border-radius-lg);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-default);
     width: 100%;
     max-width: 800px;
 }

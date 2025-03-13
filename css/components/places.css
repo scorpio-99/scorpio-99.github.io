@@ -7,16 +7,3 @@
     border-radius: var(--border-radius-md);
     margin: var(--spacing-lg) 0;
 }
-
-.place-item {
-    background: var(--color-overlay);
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius-sm);
-    margin: var(--spacing-sm) 0;
-    transition: transform var(--transition-speed), background-color var(--transition-speed);
-}
-
-.place-item:hover {
-    background: var(--color-overlay-hover);
-    transform: scale(1.05);
-} 

@@ -9,19 +9,7 @@ function initMap() {
     });
 }
 
-function displayPlacesList() {
-    const container = document.getElementById('places-list');
-    container.innerHTML = data.places.map(place => `
-        <div class="place-item">
-            <h3>${place.name}</h3>
-            <div>${place.date}</div>
-            <div>${place.description}</div>
-        </div>
-    `).join('');
-}
-
 // Initialize after DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initMap();
-    displayPlacesList();
-}); 
+});

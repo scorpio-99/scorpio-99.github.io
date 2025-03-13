@@ -1,0 +1,39 @@
+/* Interactive element styles */
+.hover-grow {
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+.hover-grow:hover {
+    transform: scale(1.05);
+    background: var(--color-overlay-hover);
+}
+
+.hover-grow-sm:hover {
+    transform: scale(1.02);
+}
+
+.hover-grow-lg:hover {
+    transform: scale(1.1);
+}
+
+/* Common card styles */
+.card {
+    background: var(--color-overlay);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+}
+
+.card-sm {
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-sm);
+}
+
+.card-lg {
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+}
+
+/* Section spacing */
+.section-spacing {
+    margin: var(--spacing-xl) 0;
+} 

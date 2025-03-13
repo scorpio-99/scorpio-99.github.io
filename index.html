@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/base/general.css">
     <link rel="stylesheet" href="css/base/typography.css">
     <link rel="stylesheet" href="css/base/layout.css">
+    <!-- Utils -->
+    <link rel="stylesheet" href="css/utils/shared.css">
+    <link rel="stylesheet" href="css/utils/animations.css">
     <!-- Components -->
     <link rel="stylesheet" href="css/components/message.css">
     <link rel="stylesheet" href="css/components/quotes.css">
@@ -19,14 +22,12 @@
     <link rel="stylesheet" href="css/components/fun-facts.css">
     <link rel="stylesheet" href="css/components/music-player.css">
     <link rel="stylesheet" href="css/components/upcoming-events.css">
-    <!-- Utilities -->
-    <link rel="stylesheet" href="css/utils/animations.css">
     <!-- External -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container card card-lg">
         <h1>Luca & Thuy</h1>
 
         <div class="message">
@@ -34,62 +35,68 @@
             <span class="heart">❤</span>
         </div>
 
-        <div class="quote-carousel">
+        <div class="quote-carousel card hover-grow section-spacing">
             <p id="quote" class="quote"></p>
         </div>
 
-        <div class="timeline">
-            <button class="nav-button prev" onclick="prevEvent()">❮</button>
-            <div class="timeline-item" id="current-event">
+        <div class="timeline section-spacing">
+            <button class="nav-button hover-grow-lg" onclick="prevEvent()">❮</button>
+            <div class="timeline-item card hover-grow">
                 <div class="date" id="current-date"></div>
                 <div class="event" id="current-event-text"></div>
             </div>
-            <button class="nav-button next" onclick="nextEvent()">❯</button>
+            <button class="nav-button hover-grow-lg" onclick="nextEvent()">❯</button>
         </div>
 
-        <div class="counter">
-            <div class="time-block">
+        <div class="counter section-spacing">
+            <div class="time-block card hover-grow-lg">
                 <div class="number" id="days">0</div>
                 <div class="label">Days</div>
             </div>
-            <div class="time-block">
+            <div class="time-block card hover-grow-lg">
                 <div class="number" id="hours">0</div>
                 <div class="label">Hours</div>
             </div>
-            <div class="time-block">
+            <div class="time-block card hover-grow-lg">
                 <div class="number" id="minutes">0</div>
                 <div class="label">Minutes</div>
             </div>
-            <div class="time-block">
+            <div class="time-block card hover-grow-lg">
                 <div class="number" id="seconds">0</div>
                 <div class="label">Seconds</div>
             </div>
         </div>
 
-        <div class="upcoming-events">
+        <div class="upcoming-events card section-spacing">
             <h2>Upcoming Milestones</h2>
-            <div id="next-event" class="next-event"></div>
+            <div id="next-event" class="next-event card hover-grow"></div>
         </div>
 
-        <div class="our-places">
+        <div class="our-places section-spacing">
             <h2>Our Special Places</h2>
             <div id="map"></div>
-            <div class="places-list" id="places-list"></div>
+            <div class="places-list">
+                <div class="place-item card hover-grow" id="places-list"></div>
+            </div>
         </div>
 
-        <div class="bucket-list">
+        <div class="bucket-list section-spacing">
             <h2>Our Future Adventures</h2>
-            <ul class="plans" id="plans-list"></ul>
+            <ul class="plans" id="plans-list">
+                <!-- Plans will be added here dynamically with card and hover-grow classes -->
+            </ul>
         </div>
 
-        <div class="fun-facts">
+        <div class="fun-facts section-spacing">
             <h2>Our Story in Numbers</h2>
-            <div class="facts-container" id="facts-container"></div>
+            <div class="facts-container" id="facts-container">
+                <!-- Facts will be added here dynamically with card and hover-grow classes -->
+            </div>
         </div>
 
-        <div class="music-player">
+        <div class="music-player section-spacing">
             <h2>Our Song</h2>
-            <audio controls>
+            <audio controls class="hover-grow-sm">
                 <source src="assets/adele.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>

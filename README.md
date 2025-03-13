@@ -14,7 +14,7 @@ This project is automatically deployed via GitHub Pages. Ensure your latest chan
 ## Usage
 1. Clone the repository:
 ```sh
-git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
+git clone https://github.com/scorpio-99/scorpio-99.github.io
 ```
 2. Open index.html in Browser.
-
+3. Enjoy

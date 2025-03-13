@@ -15,13 +15,13 @@
     max-width: 120px;
 }
 
-.number {
+.time-block .number {
     font-size: clamp(1.5em, 4vw, 2em);
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.label {
+.time-block .label {
     font-size: clamp(0.8em, 2vw, 0.9em);
     text-transform: uppercase;
 } 

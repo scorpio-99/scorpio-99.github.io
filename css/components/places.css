@@ -13,10 +13,5 @@
     padding: 15px;
     border-radius: 8px;
     margin: 10px 0;
-    cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.place-item:hover {
-    background: rgba(255, 255, 255, 0.2);
 } 

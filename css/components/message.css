@@ -1,0 +1,10 @@
+.message {
+    font-size: clamp(1em, 3vw, 1.2em);
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 0 15px;
+}
+
+.heart {
+    color: #ff4b6e;
+} 

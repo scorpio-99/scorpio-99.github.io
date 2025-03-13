@@ -1,7 +1,7 @@
 let currentEventIndex = 0;
 
 function updateEventDisplay() {
-    const currentEvent = events[currentEventIndex];
+    const currentEvent = data.events[currentEventIndex];
     document.getElementById('current-date').textContent = currentEvent.date;
     document.getElementById('current-event-text').textContent = currentEvent.event;
     
@@ -12,12 +12,12 @@ function updateEventDisplay() {
 }
 
 function nextEvent() {
-    currentEventIndex = (currentEventIndex + 1) % events.length;
+    currentEventIndex = (currentEventIndex + 1) % data.events.length;
     updateEventDisplay();
 }
 
 function prevEvent() {
-    currentEventIndex = (currentEventIndex - 1 + events.length) % events.length;
+    currentEventIndex = (currentEventIndex - 1 + data.events.length) % data.events.length;
     updateEventDisplay();
 }
 

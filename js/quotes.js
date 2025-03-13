@@ -1,6 +1,6 @@
 function updateQuote() {
     const quoteElement = document.getElementById('quote');
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    const randomQuote = data.quotes[Math.floor(Math.random() * data.quotes.length)];
     quoteElement.textContent = randomQuote;
 }
 

@@ -1,0 +1,23 @@
+:root {
+    /* Colors */
+    --color-primary: #ff4b6e;
+    --color-background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    --color-text: #fff;
+    --color-overlay: rgba(255, 255, 255, 0.1);
+    --color-overlay-hover: rgba(255, 255, 255, 0.2);
+    
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+    
+    /* Border Radius */
+    --border-radius-sm: 8px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 15px;
+    
+    /* Transitions */
+    --transition-speed: 0.3s;
+} 

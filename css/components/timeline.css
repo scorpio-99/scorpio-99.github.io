@@ -29,4 +29,9 @@
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;
+}
+
+.nav-button:hover {
+    background: var(--color-overlay-hover);
+    transform: scale(1.1);
 } 

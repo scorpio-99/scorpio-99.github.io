@@ -1,0 +1,19 @@
+# Amore
+
+This is a static website hosted on GitHub Pages at [amore.lmeli.com](https://amore.lmeli.com).  
+The project only consists of HTML, CSS, and JavaScript files due to technical limitations by GitHub Pages.
+
+## Features
+- Static site powered by GitHub Pages
+- Custom domain: [amore.lmeli.com](https://amore.lmeli.com)
+- JavaScript-based data management (`js/data/data.js`)
+
+## Deployment
+This project is automatically deployed via GitHub Pages. Ensure your latest changes are pushed to the `main` branch.
+
+## Usage
+1. Clone the repository:
+```sh
+git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
+```
+2. Open index.html in Browser.

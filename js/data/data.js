@@ -34,11 +34,59 @@ const data = {
 
     places: [
         {
-            name: "First Date Location",
+            name: "First Meet",
             date: "24.02.2024",
             coordinates: [51.0311, 7.0155],
             description: "Where it all began..."
-        }
+        },
+        {
+            name: "Düsseldorf Weeze",
+            date: "24.02.2024",
+            coordinates: [51.600, 6.154],
+            description: "Driving 80km on a first date?"
+        },
+        {
+            name: "Lake Como",
+            date: "29.04.24 - 01.05.24",
+            coordinates: [46.045,9.254],
+            description: "Our first vacation (not even a couple)"
+        },
+        {
+            name: "Travis Scott Konzert",
+            date: "27.07.24",
+            coordinates: [50.068, 8.6429],
+            description: ""
+        },
+        {
+            name: "Munich",
+            date: "31.08.24",
+            coordinates: [48.168, 11.391],
+            description: "Here for Adele"
+        },
+        {
+            name: "Schloss Neuschwanstein",
+            date: "01.09.24",
+            coordinates: [47.556,10.746],
+            description: "Our mini trip trough bavaria"
+        },
+        {
+            name: "Charleroi",
+            date: "03.12.24",
+            coordinates: [50.422,4.263],
+            description: ""
+        },
+        {
+            name: "Finland",
+            date: "03.12.24 - 07.12.24",
+            coordinates: [66.650, 23.400],
+            description: "Our christmas trip"
+        },
+        {
+            name: "Liège",
+            date: "07.12.24",
+            coordinates: [50.624, 5.434],
+            description: "Fever dream fr fr"
+        },
     ],
 
     bucketList: [

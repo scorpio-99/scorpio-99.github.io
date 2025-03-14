@@ -1,16 +1,10 @@
 .plans {
     list-style: none;
+    margin: 0;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
-}
-
-.plan-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    transition: transform 0.3s;
 }
 
 .plan-status {
@@ -18,8 +12,3 @@
     color: var(--color-primary);
     margin-top: 5px;
 }
-
-.plan-item:hover {
-    transform: scale(1.05);
-    background: var(--color-overlay-hover);
-} 

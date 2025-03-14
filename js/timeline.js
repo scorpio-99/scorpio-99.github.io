@@ -4,11 +4,6 @@ function updateEventDisplay() {
     const currentEvent = data.events[currentEventIndex];
     document.getElementById('current-date').textContent = currentEvent.date;
     document.getElementById('current-event-text').textContent = currentEvent.event;
-    
-    const timelineItem = document.getElementById('current-event');
-    timelineItem.style.animation = 'none';
-    timelineItem.offsetHeight;
-    timelineItem.style.animation = null;
 }
 
 function nextEvent() {

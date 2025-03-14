@@ -1,5 +1,6 @@
 const data = {
     quotes: [
+        "Every moment with you makes life more beautiful",
         "Every love story is beautiful, but ours is my favorite.",
         "You're the first thought in my morning and the last thought in my night.",
         "With you, every day feels like Valentine's Day.",

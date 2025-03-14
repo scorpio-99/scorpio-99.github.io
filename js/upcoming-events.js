@@ -19,4 +19,4 @@ function updateNextEvent() {
 }
 
 updateNextEvent();
-setInterval(updateNextEvent, 1000 * 60 * 60); // Update every hour 
+setInterval(updateNextEvent, 1000 * 60 * 60); // Update every hour

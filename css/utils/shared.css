@@ -4,16 +4,9 @@
 }
 
 .hover-grow:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
     background: var(--color-overlay-hover);
-}
-
-.hover-grow-sm:hover {
-    transform: scale(1.02);
-}
-
-.hover-grow-lg:hover {
-    transform: scale(1.1);
+    cursor: pointer;
 }
 
 /* Common card styles */

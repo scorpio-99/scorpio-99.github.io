@@ -1,7 +1,5 @@
 body {
-    min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
     text-align: center;
     background: var(--color-background);
@@ -9,17 +7,7 @@ body {
 
 .container {
     margin: var(--spacing-lg);
-    padding: var(--spacing-lg);
-    background: var(--color-overlay);
-    border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-default);
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
 }
-
-.section {
-    margin: 30px 0;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-} 

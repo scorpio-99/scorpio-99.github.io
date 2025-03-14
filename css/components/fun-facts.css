@@ -2,19 +2,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--spacing-lg);
-    padding: var(--spacing-sm);
 }
 
 .fact {
-    background: var(--color-overlay);
     padding: var(--spacing-lg);
-    border-radius: var(--border-radius-md);
-    transition: transform var(--transition-speed), background-color var(--transition-speed);
-}
-
-.fact:hover {
-    background: var(--color-overlay-hover);
-    transform: scale(1.05);
 }
 
 .fact .number {

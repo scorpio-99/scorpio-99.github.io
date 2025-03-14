@@ -1,19 +1,14 @@
 .quote-carousel {
-    margin: var(--spacing-xl) 0;
-    padding: var(--spacing-md);
-    background: var(--color-overlay);
-    border-radius: var(--border-radius-md);
-    transition: transform var(--transition-speed);
+    height: 125px;
 }
 
-.quote-carousel:hover {
-    background: var(--color-overlay-hover);
-    transform: scale(1.02);
+.quote-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
-.quote {
-    font-size: clamp(0.9em, 2.5vw, 1.1em);
-    font-style: italic;
-    transition: opacity var(--transition-speed);
-    padding: 0 var(--spacing-sm);
-} 
+.quote-wrapper .heart {
+    padding-bottom: 5px;
+}

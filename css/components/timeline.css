@@ -6,38 +6,20 @@
 }
 
 .timeline-item {
-    padding: var(--spacing-md);
-    background: var(--color-overlay);
-    border-radius: var(--border-radius-md);
-    min-width: 200px;
-    max-width: 100%;
-    transition: transform var(--transition-speed);
-}
-
-.timeline-item:hover {
-    background: var(--color-overlay-hover);
-    transform: scale(1.05);
+    width: 250px;
 }
 
 .timeline-item .date {
     color: var(--color-primary);
     font-weight: bold;
     padding-bottom: var(--spacing-sm);
-    font-size: clamp(0.9em, 2.5vw, 1em);
 }
 
 .nav-button {
     background: var(--color-overlay);
     border: none;
     color: var(--color-text);
-    padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
-    font-size: clamp(1em, 3vw, 1.2em);
+    padding: 15px;
     border-radius: 50%;
     cursor: pointer;
-    transition: transform var(--transition-speed), background-color var(--transition-speed);
 }
-
-.nav-button:hover {
-    background: var(--color-overlay-hover);
-    transform: scale(1.1);
-} 

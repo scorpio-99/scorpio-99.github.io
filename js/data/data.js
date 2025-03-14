@@ -1,3 +1,9 @@
+// ToDo: find more reusable variables
+
+// Variables
+const ANNIVERSARY_DATE = new Date('2024-05-01T00:00:00');
+
+// Data
 const data = {
     quotes: [
         "Every moment with you makes life more beautiful",

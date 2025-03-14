@@ -1,0 +1,7 @@
+/* ToDo: Adjust styling */
+
+.milestones-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}

@@ -1,8 +1,6 @@
-const anniversaryDate = new Date('2024-05-01T00:00:00');
-
 function updateCounter() {
     const now = new Date();
-    const timeDifference = now - anniversaryDate;
+    const timeDifference = now - ANNIVERSARY_DATE;
 
     const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

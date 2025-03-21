@@ -115,6 +115,18 @@ const data = {
             coordinates: [50.624, 5.434],
             description: "Fever dream fr fr"
         },
+        {
+            name: "Disneyland",
+            date: "15.03.25",
+            coordinates: [48.867, 2.781],
+            description: "<img class='places-embed-image' src='assets/mickey-and-minnie.png' alt='Mickey and Minnie Mouse kissing.'>"
+        },
+        {
+            name: "Paris",
+            date: "16.03.25",
+            coordinates: [48.858, 2.182],
+            description: "The City of Love ❤️"
+        },
     ],
 
     bucketList: [

@@ -10,11 +10,11 @@ function initMap() {
     
     data.places.forEach(place => {
         const popupContent = `
-            <b>${place.name}</b>
-            <br>${place.date}
-            ${place.description ? `<br>${place.description}` : ''}
+            <div class="place-name">${place.name}</div>
+            <div class="place-date">${place.date}
+            ${place.description ? `<div class="place-description">${place.description}` : ''}
         `;
-        
+
         L.marker(place.coordinates)
             .bindPopup(popupContent)
             .addTo(map);

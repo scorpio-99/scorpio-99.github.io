@@ -1,6 +1,9 @@
 :root {
-    /* Base */
+    /* General */
     --content-width: 800px;
+    --map-height: 400px;
+    --transition-speed: 0.3s;
+    --shadow-default: 0 8px 32px var(--color-shadow);
 
     /* Spacing */
     --spacing-xs: 5px;
@@ -28,10 +31,4 @@
     --border-radius-sm: 8px;
     --border-radius-md: 10px;
     --border-radius-lg: 15px;
-
-    /* Transitions */
-    --transition-speed: 0.3s;
-
-    /* Shadows */
-    --shadow-default: 0 8px 32px var(--color-shadow);
 }

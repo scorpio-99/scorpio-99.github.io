@@ -1,4 +1,22 @@
 .our-places #map {
-    height: 300px;
+    height: var(--map-height);
     border-radius: var(--border-radius-md);
+}
+
+.our-places #map .place-name {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.our-places #map .leaflet-popup-content {
+    width: max-content !important;
+}
+
+.our-places #map .place-description {
+    margin-top: 10px;
+    white-space: pre-line;
+}
+
+.our-places #map .place-description .places-embed-image {
+    height: 100px;
 }

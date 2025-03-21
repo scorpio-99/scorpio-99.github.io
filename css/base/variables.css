@@ -1,10 +1,20 @@
 :root {
+    /* Base */
+    --content-width: 800px;
+
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+
     /* Base Colors */
     --color-pink-light: #f8c0b4;
     --color-pink-dark: #ff8a8e;
     --color-pink-accent: #ff4b6e;
     --color-white: #fff;
-    
+
     /* Functional Colors */
     --color-primary: var(--color-pink-accent);
     --color-text: var(--color-white);
@@ -12,19 +22,12 @@
     --color-overlay: rgba(255, 255, 255, 0.15);
     --color-overlay-hover: rgba(255, 255, 255, 0.25);
     --color-shadow: rgba(0, 0, 0, 0.1);
-    
-    /* Spacing */
-    --spacing-xs: 5px;
-    --spacing-sm: 10px;
-    --spacing-md: 15px;
-    --spacing-lg: 20px;
-    --spacing-xl: 30px;
-    
+
     /* Border Radius */
     --border-radius-sm: 8px;
     --border-radius-md: 10px;
     --border-radius-lg: 15px;
-    
+
     /* Transitions */
     --transition-speed: 0.3s;
 

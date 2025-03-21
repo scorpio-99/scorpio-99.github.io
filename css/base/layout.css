@@ -6,8 +6,11 @@ body {
 }
 
 .container {
-    margin: var(--spacing-lg);
+    margin: var(--spacing-xl);
+    padding: 0 var(--spacing-xl);
     box-shadow: var(--shadow-default);
     width: 100%;
-    max-width: 1000px;
+    max-width: var(--content-width);
+    background: var(--color-overlay);
+    border-radius: var(--border-radius-md);
 }

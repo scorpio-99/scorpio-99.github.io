@@ -1,57 +1,65 @@
-// ToDo: when milestone => different layout + animation
+const { DateTime, Interval } = luxon;
 
 function generateMilestones() {
     const milestones = [];
-
-    // Generate monthly milestones for the first year
-    for (let i = 1; i <= 12; i++) {
-        const monthMilestone = new Date(ANNIVERSARY_DATE);
-        monthMilestone.setMonth(ANNIVERSARY_DATE.getMonth() + i);
-
-        milestones.push({
-            date: monthMilestone,
-            milestone: i === 12 ? '1 Year Anniversary' : `${i} Month${i === 1 ? '' : 's'} Anniversary`
-        });
-    }
-
-    // Generate 100-day milestones for the first year
-    for (let i = 1; i <= 3; i++) {
-        const dayMilestone = new Date(ANNIVERSARY_DATE);
-        dayMilestone.setDate(ANNIVERSARY_DATE.getDate() + (i * 100));
-
-        milestones.push({
-            date: dayMilestone,
-            milestone: `${i * 100} Days Together`
-        });
-    }
-
-    // Generate yearly milestones up to 100 years
-    for (let i = 2; i <= 100; i++) {
-        const yearMilestone = new Date(ANNIVERSARY_DATE);
-        yearMilestone.setFullYear(ANNIVERSARY_DATE.getFullYear() + i);
-
-        milestones.push({
-            date: yearMilestone,
-            milestone: `${i} Year${i === 1 ? '' : 's'} Anniversary`
-        });
-    }
-
-    // Add the anniversary start date
+    const now = DateTime.now();
+    const anniversary = DateTime.fromJSDate(ANNIVERSARY_DATE);
+    
+    // Add anniversary start
     milestones.push({
-        date: new Date(ANNIVERSARY_DATE),
+        date: anniversary.toJSDate(),
         milestone: 'Our Anniversary'
     });
 
-    // Sort milestones by date
+    // Calculate current period
+    const monthsInterval = Interval.fromDateTimes(anniversary, now);
+    const totalMonths = Math.floor(monthsInterval.length('months'));
+    const currentPeriod = Math.floor(totalMonths / 12);
+
+    // Generate milestones for current period and next 12 months
+    const monthsToGenerate = (currentPeriod + 2) * 12; // Current period + next year
+    
+    for (let i = 1; i <= monthsToGenerate; i++) {
+        const milestoneDate = anniversary.plus({ months: i });
+        const months = i;
+        const years = Math.floor(months / 12);
+        const remainingMonths = months % 12;
+        
+        // Skip if milestone is more than 12 months in the future from now
+        if (milestoneDate > now.plus({ months: 12 })) continue;
+        
+        let milestone;
+        if (years === 0) {
+            milestone = `${months} Month${months === 1 ? '' : 's'} Anniversary`;
+        } else if (remainingMonths === 0) {
+            milestone = `${years} Year${years === 1 ? '' : 's'} Anniversary`;
+        } else {
+            milestone = `${years} Year${years === 1 ? '' : 's'} and ${remainingMonths} Month${remainingMonths === 1 ? '' : 's'} Anniversary`;
+        }
+
+        milestones.push({
+            date: milestoneDate.toJSDate(),
+            milestone: milestone
+        });
+    }
+
+    // Add 100-day milestones that are still in the future or recent past
+    [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1250, 1500, 1750, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000, 7000, 8000, 9000, 10000, 15000, 20000].forEach(days => {
+        const milestoneDate = anniversary.plus({ days });
+        // Only add if within our window of interest
+        if (milestoneDate < now.plus({ months: 12 }) && milestoneDate > now.minus({ months: 6 })) {
+            milestones.push({
+                date: milestoneDate.toJSDate(),
+                milestone: `${days} Days Together`
+            });
+        }
+    });
+
     return milestones.sort((a, b) => a.date - b.date);
 }
 
 function formatDate(date) {
-    return date.toLocaleDateString('de-DE', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-    });
+    return DateTime.fromJSDate(date).toFormat('dd.MM.yyyy');
 }
 
 function formatMilestone(milestone, daysUntil) {
@@ -65,8 +73,9 @@ function formatMilestone(milestone, daysUntil) {
 }
 
 function isSameDayAndMonth(date1, date2) {
-    return date1.getDate() === date2.getDate() && 
-           date1.getMonth() === date2.getMonth();
+    const d1 = DateTime.fromJSDate(date1);
+    const d2 = DateTime.fromJSDate(date2);
+    return d1.hasSame(d2, 'day');
 }
 
 function updateNextMilestone() {
@@ -77,37 +86,45 @@ function updateNextMilestone() {
     const todayMilestone = milestones.find(m => isSameDayAndMonth(m.date, now));
     
     if (todayMilestone) {
-        // Today is a milestone! Show celebration mode
-        const container = document.querySelector('.milestones-container');
-        container.innerHTML = `
-            <div class="milestone milestone-celebration card hover-grow">
-                <div class="milestone-label">🎉 Today's Milestone! 🎉</div>
-                <div class="milestone-content">
-                    <div class="milestone-event">${todayMilestone.milestone}</div>
-                    <div class="milestone-date">${formatDate(todayMilestone.date)}</div>
-                    <div class="milestone-days">Today is the day!</div>
-                </div>
-            </div>
-        `;
-        
-        // Start the celebration effect
-        startCelebration();
+        showCelebrationMilestone(todayMilestone);
     } else {
-        // Not a milestone day, show regular previous/next view
-        const nextMilestone = milestones.find(m => m.date > now);
-        const prevMilestone = milestones.reverse().find(m => m.date <= now);
+        showRegularMilestones(milestones);
+    }
+}
 
-        if (nextMilestone) {
-            const daysUntil = Math.ceil((nextMilestone.date - now) / (1000 * 60 * 60 * 24));
-            document.querySelector('#next-milestone .milestone-content').innerHTML = 
-                formatMilestone(nextMilestone, daysUntil);
-        }
+function showCelebrationMilestone(milestone) {
+    const container = document.querySelector('.milestones-container');
+    container.innerHTML = `
+        <div class="milestone milestone-celebration card hover-grow">
+            <div class="milestone-label">🎉 Today's Milestone! 🎉</div>
+            <div class="milestone-content">
+                <div class="milestone-event">${milestone.milestone}</div>
+                <div class="milestone-date">${formatDate(milestone.date)}</div>
+                <div class="milestone-days">Today is the day!</div>
+            </div>
+        </div>
+    `;
+    startCelebration();
+}
 
-        if (prevMilestone) {
-            const daysSince = Math.floor((now - prevMilestone.date) / (1000 * 60 * 60 * 24));
-            document.querySelector('#previous-milestone .milestone-content').innerHTML = 
-                formatMilestone(prevMilestone, -daysSince);
-        }
+function showRegularMilestones(milestones) {
+    const now = DateTime.now();
+    
+    const nextMilestone = milestones.find(m => DateTime.fromJSDate(m.date) > now);
+    const prevMilestone = [...milestones].reverse().find(m => DateTime.fromJSDate(m.date) <= now);
+
+    if (nextMilestone) {
+        const interval = Interval.fromDateTimes(now, DateTime.fromJSDate(nextMilestone.date));
+        const daysUntil = Math.ceil(interval.length('days'));
+        document.querySelector('#next-milestone .milestone-content').innerHTML = 
+            formatMilestone(nextMilestone, daysUntil);
+    }
+
+    if (prevMilestone) {
+        const interval = Interval.fromDateTimes(DateTime.fromJSDate(prevMilestone.date), now);
+        const daysSince = Math.floor(interval.length('days'));
+        document.querySelector('#previous-milestone .milestone-content').innerHTML = 
+            formatMilestone(prevMilestone, -daysSince);
     }
 }
 

@@ -56,9 +56,11 @@ function formatDate(date) {
 
 function formatMilestone(milestone, daysUntil) {
     return `
-        ${milestone.milestone}<br>
-        <small>${Math.abs(daysUntil)} days ${daysUntil >= 0 ? 'to go' : 'ago'}</small><br>
-        <small>(${formatDate(milestone.date)})</small>
+        <div class="milestone-event">${milestone.milestone}</div>
+        <div class="milestone-date">${formatDate(milestone.date)}</div>
+        <div class="milestone-days">
+            ${Math.abs(daysUntil)} days ${daysUntil >= 0 ? 'to go' : 'ago'}
+        </div>
     `;
 }
 

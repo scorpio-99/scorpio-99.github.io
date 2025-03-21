@@ -1,7 +1,68 @@
-/* ToDo: Adjust styling */
+.milestones {
+    position: relative;
+    overflow: hidden;
+}
 
 .milestones-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.milestone {
     display: flex;
-    gap: 2rem;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.milestone::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+}
+
+.milestone-label {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+    margin-bottom: var(--spacing-md);
+}
+
+.milestone-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.milestone-event {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: var(--spacing-xs);
+}
+
+.milestone-date {
+    color: var(--color-text-secondary);
+    font-size: 0.9em;
+}
+
+.milestone-days {
+    font-size: 1.1em;
+    color: var(--color-primary);
+    margin-top: var(--spacing-xs);
+}
+
+@media (max-width: 600px) {
+    .milestones-container {
+        grid-template-columns: 1fr;
+    }
 }

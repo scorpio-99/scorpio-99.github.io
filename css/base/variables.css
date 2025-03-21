@@ -18,6 +18,7 @@
     /* Functional Colors */
     --color-primary: var(--color-pink-accent);
     --color-text: var(--color-white);
+    --color-text-secondary: rgba(255, 255, 255, 0.8);
     --color-background: linear-gradient(45deg, var(--color-pink-dark), var(--color-pink-light));
     --color-overlay: rgba(255, 255, 255, 0.15);
     --color-overlay-hover: rgba(255, 255, 255, 0.25);
@@ -33,4 +34,4 @@
 
     /* Shadows */
     --shadow-default: 0 8px 32px var(--color-shadow);
-} 
+}

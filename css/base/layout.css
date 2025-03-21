@@ -3,11 +3,12 @@ body {
     justify-content: center;
     text-align: center;
     background: var(--color-background);
+    margin: 0;
 }
 
 .container {
-    margin: var(--spacing-xl);
-    padding: 0 var(--spacing-xl);
+    margin: var(--spacing-lg);
+    padding: 0 var(--spacing-lg);
     box-shadow: var(--shadow-default);
     width: 100%;
     max-width: var(--content-width);

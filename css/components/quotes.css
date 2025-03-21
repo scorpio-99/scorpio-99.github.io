@@ -2,10 +2,6 @@
     height: 125px;
 }
 
-.quote-carousel.hover-grow:hover {
-    transform: scale(1.02);
-}
-
 .quote-wrapper {
     display: flex;
     flex-direction: column;

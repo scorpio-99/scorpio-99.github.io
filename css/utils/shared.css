@@ -1,12 +1,16 @@
 /* Interactive element styles */
-.hover-grow {
-    transition: transform var(--transition-speed), background-color var(--transition-speed);
+.hover-grow,
+.hover-grow-sm {
+    transition: transform var(--transition-speed);
+    cursor: pointer;
 }
 
 .hover-grow:hover {
-    transform: scale(1.04);
-    background: var(--color-overlay-hover);
-    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.hover-grow-sm:hover {
+    transform: scale(1.02);
 }
 
 /* Common card styles */

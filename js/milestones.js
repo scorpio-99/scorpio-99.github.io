@@ -62,7 +62,7 @@ function updateNextMilestone() {
 function showCelebrationMilestone(milestone) {
     const container = document.querySelector('.milestones-container');
     container.innerHTML = `
-        <div class="milestone milestone-celebration card hover-grow">
+        <div class="milestone milestone-celebration card hover-grow-sm">
             <div class="milestone-label">🎉 Today's Milestone! 🎉</div>
             <div class="milestone-content">
                 <div class="milestone-event">${milestone.milestone}</div>

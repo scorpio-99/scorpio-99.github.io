@@ -51,10 +51,12 @@
 /* Map controls */
 .leaflet-control-zoom {
     border: none !important;
-    margin-right: var(--spacing-md) !important;
+    margin: var(--spacing-md) var(--spacing-md) 0 0 !important;
 }
 
-.leaflet-control-zoom a {
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    color: var(--color-primary) !important;
     border: none !important;
     width: 30px !important;
     height: 30px !important;
@@ -66,5 +68,10 @@
 
 /* Hide popup close button */
 .custom-popup .leaflet-popup-close-button {
+    display: none !important;
+}
+
+/* Hide attribution */
+.leaflet-control-attribution {
     display: none !important;
 }

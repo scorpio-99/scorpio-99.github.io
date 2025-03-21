@@ -6,23 +6,16 @@
 
 /* Popup styles */
 .custom-popup .leaflet-popup-content-wrapper {
-    background: var(--color-white);
     border-radius: var(--border-radius-md);
-    padding: var(--spacing-xs);
-    padding-top: var(--spacing-sm) !important;
+    padding: var(--spacing-sm) !important;
 }
 
 .custom-popup .leaflet-popup-content {
     margin: var(--spacing-xs) !important;
-    text-align: center !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
 }
 
 .place-popup {
     text-align: center;
-    color: var(--color-pink-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,21 +25,17 @@
 .place-popup .place-name {
     color: var(--color-primary);
     font-weight: bold;
-    font-size: 1.1em;
     margin-bottom: var(--spacing-xs);
 }
 
 .place-popup .place-date {
-    color: #666; /* Darker gray for better readability */
-    font-size: 0.9em;
+    color: var(--color-text-secondary);
     margin-bottom: var(--spacing-xs);
 }
 
 .place-popup .place-description {
     margin-top: var(--spacing-sm);
     white-space: pre-line;
-    font-size: 0.9em;
-    color: #333; /* Dark text for descriptions */
 }
 
 .place-popup .places-embed-image {
@@ -66,20 +55,13 @@
 }
 
 .leaflet-control-zoom a {
-    background: var(--color-white) !important;
-    color: var(--color-primary) !important;
     border: none !important;
     width: 30px !important;
     height: 30px !important;
     line-height: 30px !important;
-    font-size: 16px !important;
     border-radius: var(--border-radius-sm) !important;
     margin-bottom: var(--spacing-xs) !important;
     box-shadow: var(--shadow-default) !important;
-}
-
-.leaflet-control-zoom a:hover {
-    background: var(--color-overlay) !important;
 }
 
 /* Hide popup close button */

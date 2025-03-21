@@ -1,7 +1,18 @@
-// ToDo: find more reusable variables
-
-// Variables
+// Constants
 const ANNIVERSARY_DATE = new Date('2024-05-01T00:00:00');
+const QUOTE_INTERVAL = 5000; // 5 seconds
+const TIMELINE_INTERVAL = 5000; // 5 seconds
+
+// Animation settings
+const ANIMATION_SETTINGS = {
+    confettiDuration: 5000,
+    confettiInterval: 200,
+    initialBurst: 30,
+    burstDelay: 100,
+    heartDuration: 1500
+};
+
+// Emojis and symbols
 const CELEBRATION_EMOJIS = [
     // hearts
     '❤️',

@@ -4,5 +4,5 @@ function updateQuote() {
     quoteElement.textContent = randomQuote;
 }
 
-setInterval(updateQuote, 5000);
+setInterval(updateQuote, QUOTE_INTERVAL);
 updateQuote(); 

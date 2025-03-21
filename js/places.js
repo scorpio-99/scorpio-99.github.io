@@ -1,10 +1,22 @@
 function initMap() {
-    const map = L.map('map').setView([50.761, 7.431], 7);
+    const defaultView = {
+        coords: [50.933, 6.950],
+        zoom: 7
+    };
+
+    const map = L.map('map').setView(defaultView.coords, defaultView.zoom);
+    
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
     
     data.places.forEach(place => {
+        const popupContent = `
+            <b>${place.name}</b>
+            <br>${place.date}
+            ${place.description ? `<br>${place.description}` : ''}
+        `;
+        
         L.marker(place.coordinates)
-            .bindPopup(`<b>${place.name}</b><br>${place.date}<br>${place.description}`)
+            .bindPopup(popupContent)
             .addTo(map);
     });
 }

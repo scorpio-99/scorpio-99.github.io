@@ -2,8 +2,13 @@ let currentEventIndex = 0;
 
 function updateEventDisplay() {
     const currentEvent = data.events[currentEventIndex];
-    document.getElementById('current-date').textContent = currentEvent.date;
-    document.getElementById('current-event-text').textContent = currentEvent.event;
+    const elements = {
+        date: document.getElementById('current-date'),
+        text: document.getElementById('current-event-text')
+    };
+
+    elements.date.textContent = currentEvent.date;
+    elements.text.textContent = currentEvent.event;
 }
 
 function nextEvent() {
@@ -17,4 +22,4 @@ function prevEvent() {
 }
 
 updateEventDisplay();
-setInterval(nextEvent, 5000); 
+setInterval(nextEvent, TIMELINE_INTERVAL); 

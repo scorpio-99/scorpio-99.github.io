@@ -1,12 +1,22 @@
 .milestones {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .milestones-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
+}
+
+/* Special styling for celebration mode */
+.milestone-celebration {
+    grid-column: 1 / -1; /* Span full width */
+}
+
+.milestone-celebration .milestone-event {
+    font-size: 1.8em;
+    margin: var(--spacing-lg) 0;
 }
 
 .milestone {

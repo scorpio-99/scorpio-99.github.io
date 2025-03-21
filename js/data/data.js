@@ -1,7 +1,24 @@
 // ToDo: find more reusable variables
 
 // Variables
-const ANNIVERSARY_DATE = new Date('2024-05-01T00:00:00');
+const ANNIVERSARY_DATE = new Date('2024-03-21T00:00:00');
+const CELEBRATION_EMOJIS = [
+    // hearts
+    '❤️',
+    '💖',
+    '💝',
+    '💕',
+    '💌',
+    // party
+    '🎉',
+    '🎊',
+    '🎈',
+    // various
+    '💫',
+    '✨',
+    '🐢',
+    '🍓'
+];
 
 // Data
 const data = {

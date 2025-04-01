@@ -1,22 +1,22 @@
-name: Deploy to GitHub Pages
+name: Deploy React App to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  # Ändern, falls du einen anderen Branch benutzt
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'  # oder deine gewünschte Node-Version
 
       - name: Install dependencies
         run: npm install
@@ -24,8 +24,12 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Set Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          CI: true
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

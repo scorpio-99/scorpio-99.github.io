@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main  # Ändern, falls du einen anderen Branch benutzt
+      - main
 
 jobs:
   deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # oder deine gewünschte Node-Version
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install

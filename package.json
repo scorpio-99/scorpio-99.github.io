@@ -1,7 +1,7 @@
 {
   "name": "amore",
   "version": "0.1.0",
-  "homepage": "http://scorpio-99.github.io/scorpio-99.github.io",
+  "homepage": "https://scorpio-99.github.io",
   "private": true,
   "dependencies": {
     "@emotion/styled": "^11.14.0",

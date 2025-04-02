@@ -11,7 +11,6 @@ import MusicPlayer from "./components/MusicPlayer";
 import HeartAnimation from "./components/HeartAnimation";
 
 // Import CSS
-import "./css/base/general.css";
 import "./css/base/layout.css";
 import "./css/base/typography.css";
 import "./css/base/variables.css";
@@ -29,17 +28,15 @@ function App() {
     return (
         <>
             <HeartAnimation/>
-            <div className="container">
-                <Header/>
-                <QuoteCarousel/>
-                <Counter/>
-                <Milestones/>
-                <Places/>
-                <Timeline/>
-                <BucketList/>
-                <FunFacts/>
-                <MusicPlayer/>
-            </div>
+            <Header/>
+            <QuoteCarousel/>
+            <Counter/>
+            <Milestones/>
+            <Places/>
+            <Timeline/>
+            <BucketList/>
+            <FunFacts/>
+            <MusicPlayer/>
         </>
     );
 }

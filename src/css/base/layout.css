@@ -4,9 +4,14 @@ body {
     text-align: center;
     background: var(--color-background);
     margin: 0;
+    box-sizing: border-box;
 }
 
-.container {
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+#root {
     margin: var(--spacing-lg);
     padding: 0 var(--spacing-lg);
     box-shadow: var(--shadow-default);
@@ -14,4 +19,4 @@ body {
     max-width: var(--content-width);
     background: var(--color-overlay);
     border-radius: var(--border-radius-md);
-} 
+}

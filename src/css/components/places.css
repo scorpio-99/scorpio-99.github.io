@@ -66,12 +66,10 @@
     box-shadow: var(--shadow-default) !important;
 }
 
-/* Hide popup close button */
 .custom-popup .leaflet-popup-close-button {
     display: none !important;
 }
 
-/* Hide attribution */
 .leaflet-control-attribution {
     display: none !important;
-}
+} 

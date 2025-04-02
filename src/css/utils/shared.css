@@ -1,4 +1,3 @@
-/* Interactive element styles */
 .hover-grow,
 .hover-grow-sm {
     transition: transform var(--transition-speed);

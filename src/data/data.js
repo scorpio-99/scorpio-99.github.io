@@ -1,10 +1,10 @@
 // Constants
-const ANNIVERSARY_DATE = new Date('2024-05-01T00:00:00');
-const QUOTE_INTERVAL = 5000; // 5 seconds
-const TIMELINE_INTERVAL = 5000; // 5 seconds
+export const ANNIVERSARY_DATE = new Date('2024-05-01T00:00:00');
+export const QUOTE_INTERVAL = 5000; // 5 seconds
+export const TIMELINE_INTERVAL = 5000; // 5 seconds
 
 // Animation settings
-const ANIMATION_SETTINGS = {
+export const ANIMATION_SETTINGS = {
     confettiDuration: 5000,
     confettiInterval: 200,
     initialBurst: 30,
@@ -13,22 +13,13 @@ const ANIMATION_SETTINGS = {
 };
 
 // Emojis and symbols
-const CELEBRATION_EMOJIS = [
+export const CELEBRATION_EMOJIS = [
     // hearts
-    '❤️',
-    '💖',
-    '💝',
-    '💕',
-    '💌',
+    '❤️', '💖', '💝', '💕', '💌',
     // party
-    '🎉',
-    '🎊',
-    '🎈',
+    '🎉', '🎊', '🎈',
     // various
-    '💫',
-    '✨',
-    '🐢',
-    '🍓'
+    '💫', '✨', '🐢', '🍓'
 ];
 
 // Data
@@ -45,19 +36,19 @@ const data = {
     ],
 
     events: [
-        { date: '14.02.2024', event: 'Match-Day' },
-        { date: '24.02.2024', event: 'First Date' },
-        { date: '22.03.2024', event: 'Autokino' },
-        { date: '02.03.2024', event: 'Roermond' },
-        { date: '30.03.2024', event: 'Kirmes' },
-        { date: '12.04.2024', event: 'Holding Hands' },
-        { date: '19.04.2024', event: 'Pottery in Düsseldorf' },
-        { date: '25.04.2024', event: 'Disney in Concert + 1st Kiss' },
-        { date: '29.04.2024 - 01.05.2024', event: 'Como Trip' },
-        { date: '01.05.2024', event: 'Anniversary' },
-        { date: '17.05.2024', event: '"I Love You"' },
-        { date: '29.06.2024', event: '❤' },
-        { date: '???', event: 'Proposal' }
+        {date: '14.02.2024', event: 'Match-Day'},
+        {date: '24.02.2024', event: 'First Date'},
+        {date: '22.03.2024', event: 'Autokino'},
+        {date: '02.03.2024', event: 'Roermond'},
+        {date: '30.03.2024', event: 'Kirmes'},
+        {date: '12.04.2024', event: 'Holding Hands'},
+        {date: '19.04.2024', event: 'Pottery in Düsseldorf'},
+        {date: '25.04.2024', event: 'Disney in Concert + 1st Kiss'},
+        {date: '29.04.2024 - 01.05.2024', event: 'Como Trip'},
+        {date: '01.05.2024', event: 'Anniversary'},
+        {date: '17.05.2024', event: 'I Love You'},
+        {date: '29.06.2024', event: '❤'},
+        {date: '???', event: 'Proposal'}
     ],
 
     places: [
@@ -76,7 +67,7 @@ const data = {
         {
             name: "Lake Como",
             date: "29.04.24 - 01.05.24",
-            coordinates: [46.045,9.254],
+            coordinates: [46.045, 9.254],
             description: "Our first vacation (not even a couple)"
         },
         {
@@ -94,13 +85,13 @@ const data = {
         {
             name: "Schloss Neuschwanstein",
             date: "01.09.24",
-            coordinates: [47.556,10.746],
+            coordinates: [47.556, 10.746],
             description: "Our mini trip trough bavaria"
         },
         {
             name: "Charleroi",
             date: "03.12.24",
-            coordinates: [50.422,4.263],
+            coordinates: [50.422, 4.263],
             description: ""
         },
         {
@@ -167,3 +158,5 @@ const data = {
         }
     ]
 };
+
+export default data; 

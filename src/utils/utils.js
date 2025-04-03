@@ -1,6 +1,5 @@
 import {DateTime} from "luxon";
-
-export const DATE_FORMAT = 'dd.MM.yyyy';
+import { DATE_FORMAT } from "../data/constants";
 
 const utils = {
     formatDate: (date) => DateTime.fromJSDate(date).toFormat(DATE_FORMAT),
@@ -13,6 +12,19 @@ const utils = {
         element.className = className;
         if (text) element.textContent = text;
         return element;
+    },
+    
+    // Date helpers
+    calculateDaysBetween: (start, end) => {
+        return Math.ceil(
+            DateTime.fromJSDate(end)
+            .diff(DateTime.fromJSDate(start), 'days')
+            .days
+        );
+    },
+    
+    isSameDay: (date1, date2) => {
+        return DateTime.fromJSDate(date1).hasSame(DateTime.fromJSDate(date2), 'day');
     }
 };
 

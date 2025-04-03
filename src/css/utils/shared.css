@@ -5,11 +5,11 @@
 }
 
 .hover-grow:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 .hover-grow-sm:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 /* Common card styles */

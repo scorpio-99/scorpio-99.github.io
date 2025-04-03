@@ -1,16 +1,23 @@
-import React, {useEffect, useState} from 'react';
-import data, {QUOTE_INTERVAL} from '../data/data';
+import React, { useEffect, useState } from 'react';
+import data from '../data/data';
+import { QUOTE_INTERVAL } from '../data/constants';
 
 function QuoteCarousel() {
     const [quote, setQuote] = useState('');
 
-    const updateQuote = () => {
-        const randomQuote = data.quotes[Math.floor(Math.random() * data.quotes.length)];
-        setQuote(randomQuote);
-    };
-
     useEffect(() => {
+        const getRandomQuote = () => {
+            const quotes = data.quotes;
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            return quotes[randomIndex];
+        };
+
+        const updateQuote = () => setQuote(getRandomQuote());
+        
+        // Set initial quote
         updateQuote();
+        
+        // Set up interval for quote rotation
         const interval = setInterval(updateQuote, QUOTE_INTERVAL);
         return () => clearInterval(interval);
     }, []);
@@ -19,7 +26,7 @@ function QuoteCarousel() {
         <div className="quote-carousel card hover-grow-sm section-spacing">
             <div className="quote-wrapper">
                 <div className="heart">❤</div>
-                <div id="quote" className="quote">{quote}</div>
+                <div className="quote">{quote}</div>
             </div>
         </div>
     );

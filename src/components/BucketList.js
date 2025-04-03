@@ -1,11 +1,11 @@
 import React from 'react';
 import data from '../data/data';
+import Card from './common/Card';
 
 function BucketList() {
     return (
-        <div className="bucket-list card section-spacing">
-            <h2>Our Future Adventures</h2>
-            <ul className="plans" id="plans-list">
+        <Card title="Our Future Adventures" className="bucket-list">
+            <ul className="plans">
                 {data.bucketList.map((plan, index) => (
                     <li key={index} className="plan-item card hover-grow">
                         <div className="plan-text">{plan.item}</div>
@@ -13,7 +13,7 @@ function BucketList() {
                     </li>
                 ))}
             </ul>
-        </div>
+        </Card>
     );
 }
 

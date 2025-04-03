@@ -11,8 +11,6 @@ import BucketList from "./components/BucketList";
 import FunFacts from "./components/FunFacts";
 import MusicPlayer from "./components/MusicPlayer";
 import HeartAnimation from "./components/HeartAnimation";
-
-// Import CSS
 import "./css/styles.css";
 
 function App() {

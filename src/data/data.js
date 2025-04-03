@@ -1,27 +1,3 @@
-// Constants
-export const ANNIVERSARY_DATE = new Date('2024-05-01T00:00:00');
-export const QUOTE_INTERVAL = 5000; // 5 seconds
-export const TIMELINE_INTERVAL = 5000; // 5 seconds
-
-// Animation settings
-export const ANIMATION_SETTINGS = {
-    confettiDuration: 5000,
-    confettiInterval: 200,
-    initialBurst: 30,
-    burstDelay: 100,
-    heartDuration: 1500
-};
-
-// Emojis and symbols
-export const CELEBRATION_EMOJIS = [
-    // hearts
-    '❤️', '💖', '💝', '💕', '💌',
-    // party
-    '🎉', '🎊', '🎈',
-    // various
-    '💫', '✨', '🐢', '🍓'
-];
-
 // Data
 const data = {
     quotes: [

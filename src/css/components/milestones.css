@@ -15,7 +15,6 @@
 }
 
 .milestone-celebration .milestone-event {
-    font-size: 1.8em;
     margin: var(--spacing-lg) 0;
 }
 
@@ -44,7 +43,6 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 0.9em;
     margin-bottom: var(--spacing-md);
 }
 
@@ -55,17 +53,12 @@
 }
 
 .milestone-event {
-    font-size: 1.2em;
+    font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: var(--spacing-xs);
 }
 
-.milestone-date {
-    font-size: 0.9em;
-}
-
 .milestone-days {
-    font-size: 1.1em;
     color: var(--color-primary);
     margin-top: var(--spacing-xs);
 }

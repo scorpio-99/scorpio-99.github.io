@@ -10,10 +10,10 @@
 }
 
 .time-block .number {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 .time-block .label {
-    font-size: 0.8em;
-} 
+    font-size: 0.8rem;
+}

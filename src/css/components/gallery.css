@@ -6,7 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-lg);
     justify-content: center;
 }
 
@@ -33,7 +33,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 15px;
-    margin-top: 20px;
 }
 
 .gallery-item {
@@ -106,19 +105,7 @@
     color: white;
     text-align: center;
     padding: 10px;
-    font-size: 1.2em;
     margin-top: 10px;
-}
-
-.close-button {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 1001;
 }
 
 .nav-button {
@@ -131,7 +118,6 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    font-size: 24px;
     cursor: pointer;
     transition: background var(--transition-speed) ease;
     z-index: 1001;
@@ -168,6 +154,5 @@
     .nav-button {
         width: 40px;
         height: 40px;
-        font-size: 20px;
     }
 }

@@ -5,8 +5,6 @@ function Lightbox({ image, onClose, onNavigate }) {
 
   return (
     <div className="lightbox" onClick={onClose}>
-      <span className="close-button">&times;</span>
-
       <button className="nav-button prev" onClick={(e) => {
         e.stopPropagation();
         onNavigate(-1);

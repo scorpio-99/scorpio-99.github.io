@@ -1,15 +1,17 @@
-body {
-    font-family: 'Arial', sans-serif;
+body, * {
+    font-family: 'Short Stack', sans-serif;
     color: var(--color-text);
 }
 
 div.title {
-    padding: var(--spacing-md) 0;
-    font-size: 2.5em;
+    font-size: 3rem;
+    font-weight: bold;
     text-shadow: 2px 2px 4px var(--color-shadow);
+    padding: var(--spacing-md) 0;
 }
 
 div.subtitle {
-    font-size: 1.8em;
-    margin-bottom: var(--spacing-xxl);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: var(--spacing-lg);
 }

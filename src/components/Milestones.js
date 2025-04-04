@@ -2,9 +2,15 @@ import React, {useEffect, useRef, useState} from 'react';
 import {DateTime, Interval} from 'luxon';
 
 import {useAppContext} from '../context/AppContext';
-import Card from './common/Card';
 import utils from '../utils/utils';
-import {ANNIVERSARY_DATE, DAY_MILESTONES} from '../data/constants';
+import {ANNIVERSARY_DATE} from '../data/constants';
+import TodayMilestone from './milestones/TodayMilestone';
+import MilestoneCard from './milestones/MilestoneCard';
+import { 
+    findTodayMilestone, 
+    generateMonthlyMilestones, 
+    generateDayMilestones 
+} from './milestones/MilestoneUtils';
 
 function Milestones() {
     const {getCurrentDate, startCelebration} = useAppContext();
@@ -55,57 +61,6 @@ function Milestones() {
         }
     }, [todayMilestone, startCelebration]);
 
-    // Helper functions
-    const createBasicMilestone = (date, milestone) => ({
-        date: date.toJSDate(),
-        milestone
-    });
-
-    const createMonthlyMilestone = (date, years, months) => {
-        let milestone;
-        if (years === 0) {
-            milestone = `${months} Month${months === 1 ? '' : 's'} Anniversary`;
-        } else if (months === 0) {
-            milestone = `${years} Year${years === 1 ? '' : 's'} Anniversary`;
-        } else {
-            milestone = `${years} Year${years === 1 ? '' : 's'} and ${months} Month${months === 1 ? '' : 's'} Anniversary`;
-        }
-        return createBasicMilestone(date, milestone);
-    };
-
-    const isInTimeWindow = (date, now) =>
-        date < now.plus({months: 12}) && date > now.minus({months: 6});
-
-    const findTodayMilestone = (milestones, now) =>
-        milestones.find(m => utils.isSameDay(m.date, now.toJSDate()));
-
-    const generateMonthlyMilestones = (anniversary, now) => {
-        const currentPeriod = Math.floor(Interval.fromDateTimes(anniversary, now).length('months') / 12);
-        const monthsToGenerate = (currentPeriod + 2) * 12;
-        const milestones = [];
-
-        for (let i = 1; i <= monthsToGenerate; i++) {
-            const milestoneDate = anniversary.plus({months: i});
-            if (milestoneDate > now.plus({months: 12})) continue;
-
-            const years = Math.floor(i / 12);
-            const months = i % 12;
-            milestones.push(createMonthlyMilestone(milestoneDate, years, months));
-        }
-
-        return milestones;
-    };
-
-    const generateDayMilestones = (anniversary, now) => {
-        return DAY_MILESTONES
-            .map(days => {
-                const date = anniversary.plus({days});
-                return isInTimeWindow(date, now) ?
-                    createBasicMilestone(date, `${days} Days Together`) : null;
-            })
-            .filter(Boolean);
-    };
-
     // Calculate days until/since milestones
     const now = getCurrentDate();
     const daysUntilNext = nextMilestone ?
@@ -137,35 +92,5 @@ function Milestones() {
         </div>
     );
 }
-
-// Extracted components for better organization
-const TodayMilestone = React.forwardRef(({milestone}, ref) => (
-    <Card className="milestone milestone-celebration" ref={ref} hover>
-        <div className="milestone-label">🎉 Today's Milestone! 🎉</div>
-        <div className="milestone-content">
-            <div className="milestone-event">{milestone.milestone}</div>
-            <div className="milestone-date">{utils.formatDate(milestone.date)}</div>
-            <div className="milestone-days">Today is the day!</div>
-        </div>
-    </Card>
-));
-
-const MilestoneCard = ({label, milestone, days}) => {
-    if (!milestone) return null;
-
-    return (
-        <Card className="milestone" hover>
-            <div className="milestone-label">{label}</div>
-            <div className="milestone-content">
-                <div className="milestone-event">{milestone.milestone}</div>
-                <div className="milestone-date">{utils.formatDate(milestone.date)}</div>
-                <div className="milestone-days">
-                    {Math.abs(days)} day{Math.abs(days) === 1 ? '' : 's'}
-                    {days >= 0 ? ' to go' : ' ago'}
-                </div>
-            </div>
-        </Card>
-    );
-};
 
 export default Milestones; 

@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import Card from './common/Card';
+import GalleryCategories from './gallery/GalleryCategories';
+import GalleryGrid from './gallery/GalleryGrid';
+import Lightbox from './gallery/Lightbox';
 import '../css/components/gallery.css';
 
 function Gallery() {
@@ -180,13 +183,15 @@ function Gallery() {
     };
 
     const navigateImage = (direction) => {
-        const currentIndex = images.findIndex(img => img.id === activeImage.id);
         const filteredImages = activeCategory === 'all'
             ? images
             : images.filter(img => img.category === activeCategory);
 
+        if (filteredImages.length === 0) return;
+
         let newIndex;
         if (activeCategory === 'all') {
+            const currentIndex = images.findIndex(img => img.id === activeImage.id);
             newIndex = (currentIndex + direction + images.length) % images.length;
             setActiveImage(images[newIndex]);
         } else {
@@ -215,63 +220,22 @@ function Gallery() {
 
     return (
         <Card title="Our Memories" className="gallery-container">
-            <div className="gallery-categories">
-                {categories.map(category => (
-                    <button
-                        key={category.id}
-                        className={`category-button ${activeCategory === category.id ? 'active' : ''}`}
-                        onClick={() => setActiveCategory(category.id)}
-                    >
-                        {category.name}
-                    </button>
-                ))}
-            </div>
+            <GalleryCategories 
+                categories={categories}
+                activeCategory={activeCategory}
+                onCategoryChange={setActiveCategory}
+            />
 
-            <div className="gallery-grid">
-                {filteredImages.map((image) => (
-                    <div
-                        key={image.id}
-                        className="gallery-item"
-                        onClick={() => openLightbox(image)}
-                    >
-                        <img src={image.src} alt={image.alt}/>
-                        <div className="gallery-caption">
-                            <span>{image.caption}</span>
-                        </div>
-                    </div>
-                ))}
-            </div>
+            <GalleryGrid 
+                images={filteredImages}
+                onImageClick={openLightbox}
+            />
 
-            {filteredImages.length === 0 && (
-                <div className="empty-gallery">
-                    <p>No images in this category yet. Add some memories!</p>
-                </div>
-            )}
-
-            {activeImage && (
-                <div className="lightbox" onClick={closeLightbox}>
-                    <span className="close-button">&times;</span>
-
-                    <button className="nav-button prev" onClick={(e) => {
-                        e.stopPropagation();
-                        navigateImage(-1);
-                    }}>
-                        ❮
-                    </button>
-
-                    <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-                        <img src={activeImage.src} alt={activeImage.alt}/>
-                        <div className="lightbox-caption">{activeImage.caption}</div>
-                    </div>
-
-                    <button className="nav-button next" onClick={(e) => {
-                        e.stopPropagation();
-                        navigateImage(1);
-                    }}>
-                        ❯
-                    </button>
-                </div>
-            )}
+            <Lightbox 
+                image={activeImage}
+                onClose={closeLightbox}
+                onNavigate={navigateImage}
+            />
         </Card>
     );
 }

@@ -1,5 +1,4 @@
-body, * {
-    font-family: 'Short Stack', sans-serif;
+body {
     color: var(--color-text);
 }
 

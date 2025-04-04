@@ -9,6 +9,7 @@ body {
 
 *, *:before, *:after {
     box-sizing: inherit;
+    font-family: 'Short Stack', sans-serif;
 }
 
 #root {

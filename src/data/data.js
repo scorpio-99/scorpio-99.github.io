@@ -10,7 +10,6 @@ const data = {
         "Life is better when I'm with you.",
         "You're my favorite notification."
     ],
-
     events: [
         {date: '14.02.2024', event: 'Match-Day'},
         {date: '24.02.2024', event: 'First Date'},
@@ -26,7 +25,6 @@ const data = {
         {date: '29.06.2024', event: '❤'},
         {date: '???', event: 'Proposal'}
     ],
-
     places: [
         {
             name: "First Meet",
@@ -93,6 +91,155 @@ const data = {
             date: "16.03.25",
             coordinates: [48.858, 2.182],
             description: "The City of Love ❤️"
+        },
+    ],
+    galleryImages: [
+        {
+            id: 1,
+            src: 'assets/gallery/airport-selfie.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'trips'
+        },
+        {
+            id: 2,
+            src: 'assets/gallery/bavaria-selfie.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'trips'
+        },
+        {
+            id: 3,
+            src: 'assets/gallery/christmas-selfie.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'special'
+        },
+        {
+            id: 4,
+            src: 'assets/gallery/christmas-selfie-hats.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'special'
+        },
+        {
+            id: 5,
+            src: 'assets/gallery/cologne-balloon-museum.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'dates'
+        },
+        {
+            id: 6,
+            src: 'assets/gallery/cologne-gondola-selfie.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'dates'
+        },
+        {
+            id: 7,
+            src: 'assets/gallery/cologne-holding-hands.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'dates'
+        },
+        {
+            id: 8,
+            src: 'assets/gallery/disneyland-bnb-selfie.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'trips'
+        },
+        {
+            id: 9,
+            src: 'assets/gallery/disneyland-selfie.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'trips'
+        },
+        {
+            id: 10,
+            src: 'assets/gallery/frankfurt-concert-travis.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'special'
+        },
+        {
+            id: 11,
+            src: 'assets/gallery/garage-selfie.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'special'
+        },
+        {
+            id: 12,
+            src: 'assets/gallery/home-birthday.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'special'
+        },
+        {
+            id: 13,
+            src: 'assets/gallery/munich-concert-adele.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'special'
+        },
+        {
+            id: 14,
+            src: 'assets/gallery/paris-eiffeltower.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'trips'
+        },
+        {
+            id: 15,
+            src: 'assets/gallery/paris-eiffeltower-selfie.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'trips'
+        },
+        {
+            id: 16,
+            src: 'assets/gallery/paris-selfie.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'trips'
+        },
+        {
+            id: 17,
+            src: 'assets/gallery/rovaniemi-reindeer.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'trips'
+        },
+        {
+            id: 18,
+            src: 'assets/gallery/rovaniemi-river.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'trips'
+        },
+        {
+            id: 19,
+            src: 'assets/gallery/rovaniemi-selfie.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'trips'
+        },
+        {
+            id: 20,
+            src: 'assets/gallery/leverkusen-face-hand.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'special'
+        },
+        {
+            id: 21,
+            src: 'assets/gallery/duesseldorf-fair-heart.PNG',
+            alt: 'tbd',
+            caption: 'tbd',
+            category: 'dates'
         },
     ],
 };

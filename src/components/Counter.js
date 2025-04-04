@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {useAppContext} from '../context/AppContext';
-import Card from './common/Card';
+import Section from './common/Section';
 
 function Counter() {
     const {timeUnits} = useAppContext();
@@ -19,10 +19,10 @@ function Counter() {
 // Extracted reusable component
 function TimeBlock({value, label}) {
     return (
-        <Card className="time-block" hover>
+        <Section card hover className="time-block">
             <div className="number">{value}</div>
             <div className="label">{label}</div>
-        </Card>
+        </Section>
     );
 }
 

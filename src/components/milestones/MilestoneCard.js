@@ -1,12 +1,12 @@
 import React from 'react';
-import Card from '../common/Card';
+import Section from '../common/Section';
 import utils from '../../utils/utils';
 
 function MilestoneCard({ label, milestone, days }) {
   if (!milestone) return null;
 
   return (
-    <Card className="milestone" hover>
+    <Section card hover className="milestone">
       <div className="milestone-label">{label}</div>
       <div className="milestone-content">
         <div className="milestone-event">{milestone.milestone}</div>
@@ -16,7 +16,7 @@ function MilestoneCard({ label, milestone, days }) {
           {days >= 0 ? ' to go' : ' ago'}
         </div>
       </div>
-    </Card>
+    </Section>
   );
 }
 

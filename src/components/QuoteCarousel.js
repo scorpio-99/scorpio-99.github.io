@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-import Card from './common/Card';
+import Section from './common/Section';
 import data from '../data/data';
 import {QUOTE_INTERVAL} from '../data/constants';
 
@@ -25,12 +25,12 @@ function QuoteCarousel() {
     }, []);
 
     return (
-        <Card className="quote-carousel" hover>
+        <Section card hover className="quote-carousel">
             <div className="quote-wrapper">
                 <div className="heart">❤</div>
                 <div className="quote">{quote}</div>
             </div>
-        </Card>
+        </Section>
     );
 }
 

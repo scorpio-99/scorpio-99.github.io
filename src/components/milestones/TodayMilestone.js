@@ -1,16 +1,16 @@
 import React from 'react';
-import Card from '../common/Card';
+import Section from '../common/Section';
 import utils from '../../utils/utils';
 
 const TodayMilestone = React.forwardRef(({ milestone }, ref) => (
-  <Card className="milestone milestone-celebration" ref={ref} hover>
+  <Section card hover className="milestone milestone-celebration" ref={ref}>
     <div className="milestone-label">🎉 Today's Milestone! 🎉</div>
     <div className="milestone-content">
       <div className="milestone-event">{milestone.milestone}</div>
       <div className="milestone-date">{utils.formatDate(milestone.date)}</div>
       <div className="milestone-days">Today is the day!</div>
     </div>
-  </Card>
+  </Section>
 ));
 
 export default TodayMilestone; 

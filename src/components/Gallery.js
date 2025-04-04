@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Card from './common/Card';
+import Section from './common/Section';
 import GalleryCategories from './gallery/GalleryCategories';
 import GalleryGrid from './gallery/GalleryGrid';
 import Lightbox from './gallery/Lightbox';
@@ -165,7 +165,7 @@ function Gallery() {
                 src: 'assets/gallery/duesseldorf-fair-heart.PNG',
                 alt: 'tbd',
                 caption: 'tbd',
-                category: 'date'
+                category: 'dates'
             },
         ];
 
@@ -219,7 +219,7 @@ function Gallery() {
         : images.filter(img => img.category === activeCategory);
 
     return (
-        <Card title="Our Memories" className="gallery-container">
+        <Section card title="Our Memories" className="gallery-container">
             <GalleryCategories 
                 categories={categories}
                 activeCategory={activeCategory}
@@ -236,7 +236,7 @@ function Gallery() {
                 onClose={closeLightbox}
                 onNavigate={navigateImage}
             />
-        </Card>
+        </Section>
     );
 }
 

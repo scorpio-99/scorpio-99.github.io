@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {DateTime, Interval} from 'luxon';
+import {DateTime} from 'luxon';
 
 import {useAppContext} from '../context/AppContext';
 import utils from '../utils/utils';

@@ -3,7 +3,7 @@ import Section from './common/Section';
 import GalleryCategories from './gallery/GalleryCategories';
 import GalleryGrid from './gallery/GalleryGrid';
 import Lightbox from './gallery/Lightbox';
-import data from '../data/data';
+import {galleryImages} from '../data/data';
 import '../css/components/gallery.css';
 
 function Gallery() {
@@ -20,7 +20,7 @@ function Gallery() {
     ];
 
     useEffect(() => {
-        setImages(data.galleryImages);
+        setImages(galleryImages);
     }, []);
 
     const openLightbox = (image) => {

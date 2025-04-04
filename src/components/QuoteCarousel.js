@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 import Section from './common/Section';
-import data from '../data/data';
+import {quotes} from '../data/data';
 import {QUOTE_INTERVAL} from '../data/constants';
 
 function QuoteCarousel() {
@@ -9,7 +9,6 @@ function QuoteCarousel() {
 
     useEffect(() => {
         const getRandomQuote = () => {
-            const quotes = data.quotes;
             const randomIndex = Math.floor(Math.random() * quotes.length);
             return quotes[randomIndex];
         };

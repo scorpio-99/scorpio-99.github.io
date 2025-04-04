@@ -1,10 +1,33 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-import {useAppContext} from '../context/AppContext';
 import Section from './common/Section';
+import {ANNIVERSARY_DATE} from "../data/constants";
 
 function Counter() {
-    const {timeUnits} = useAppContext();
+    const [timeUnits, setTimeUnits] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+    });
+
+    useEffect(() => {
+        const updateCounter = () => {
+            const now = new Date();
+            const timeDifference = now - ANNIVERSARY_DATE;
+
+            setTimeUnits({
+                days: Math.floor(timeDifference / (1000 * 60 * 60 * 24)),
+                hours: Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                minutes: Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)),
+                seconds: Math.floor((timeDifference % (1000 * 60)) / 1000)
+            });
+        };
+
+        updateCounter();
+        const interval = setInterval(updateCounter, 1000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className="counter">

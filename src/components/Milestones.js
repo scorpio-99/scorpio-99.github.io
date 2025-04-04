@@ -1,7 +1,6 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {DateTime} from 'luxon';
 
-import {useAppContext} from '../context/AppContext';
 import utils from '../utils/utils';
 import {ANNIVERSARY_DATE} from '../data/constants';
 import TodayMilestone from './milestones/TodayMilestone';
@@ -13,17 +12,16 @@ import {
 } from './milestones/MilestoneUtils';
 
 function Milestones() {
-    const {getCurrentDate, startCelebration} = useAppContext();
+    const currentDate = DateTime.now();
     const [milestones, setMilestones] = useState([]);
     const [todayMilestone, setTodayMilestone] = useState(null);
     const [nextMilestone, setNextMilestone] = useState(null);
     const [prevMilestone, setPrevMilestone] = useState(null);
-    const celebrationRef = useRef(null);
 
     // Generate milestones
     useEffect(() => {
         const updateMilestones = () => {
-            const now = getCurrentDate();
+            const now = DateTime.now();
             const anniversary = DateTime.fromJSDate(ANNIVERSARY_DATE);
 
             // Generate all milestones
@@ -49,31 +47,21 @@ function Milestones() {
         };
 
         updateMilestones();
-        // Check for milestones daily
-        const interval = setInterval(updateMilestones, 86400000);
-        return () => clearInterval(interval);
-    }, [getCurrentDate]);
+    }, [currentDate]);
 
-    // Start celebration if there's a milestone today
-    useEffect(() => {
-        if (todayMilestone && celebrationRef.current) {
-            setTimeout(() => startCelebration(celebrationRef.current), 500);
-        }
-    }, [todayMilestone, startCelebration]);
 
     // Calculate days until/since milestones
-    const now = getCurrentDate();
     const daysUntilNext = nextMilestone ?
-        utils.calculateDaysBetween(now.toJSDate(), nextMilestone.date) : 0;
+        utils.calculateDaysBetween(currentDate.toJSDate(), nextMilestone.date) : 0;
 
     const daysSincePrev = prevMilestone ?
-        utils.calculateDaysBetween(prevMilestone.date, now.toJSDate()) : 0;
+        utils.calculateDaysBetween(prevMilestone.date, currentDate.toJSDate()) : 0;
 
     return (
         <div className="milestones">
             <div className="milestones-container">
                 {todayMilestone ? (
-                    <TodayMilestone milestone={todayMilestone} ref={celebrationRef}/>
+                    <TodayMilestone milestone={todayMilestone}/>
                 ) : (
                     <>
                         <MilestoneCard

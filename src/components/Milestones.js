@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {DateTime} from 'luxon';
 
 import utils from '../utils/utils';
-import {ANNIVERSARY_DATE} from '../data/constants';
+import data from '../data/data.json';
 import TodayMilestone from './milestones/TodayMilestone';
 import MilestoneCard from './milestones/MilestoneCard';
 import { 
@@ -21,7 +21,7 @@ function Milestones() {
     useEffect(() => {
         const updateMilestones = () => {
             const now = DateTime.now();
-            const anniversary = DateTime.fromJSDate(ANNIVERSARY_DATE);
+            const anniversary = DateTime.fromJSDate(new Date(data.anniversaryDate));
 
             // Generate all milestones
             const allMilestones = [

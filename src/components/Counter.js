@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 import Section from './common/Section';
-import {ANNIVERSARY_DATE} from "../data/constants";
+import data from '../data/data.json';
 
 function Counter() {
     const [timeUnits, setTimeUnits] = useState({
@@ -14,7 +14,8 @@ function Counter() {
     useEffect(() => {
         const updateCounter = () => {
             const now = new Date();
-            const timeDifference = now - ANNIVERSARY_DATE;
+            const anniversaryDate = new Date(data.anniversaryDate);
+            const timeDifference = now - anniversaryDate;
 
             setTimeUnits({
                 days: Math.floor(timeDifference / (1000 * 60 * 60 * 24)),

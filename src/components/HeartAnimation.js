@@ -9,16 +9,16 @@ function HeartAnimation() {
             heart.style.left = x + 'px';
             heart.style.top = y + 'px';
             document.body.appendChild(heart);
-            
+
             setTimeout(() => heart.remove(), ANIMATION_SETTINGS.heartDuration);
         };
-        
+
         const handleClick = (e) => {
             createHeart(e.pageX, e.pageY);
         };
 
         document.addEventListener('click', handleClick);
-        
+
         return () => {
             document.removeEventListener('click', handleClick);
         };

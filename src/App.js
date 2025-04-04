@@ -1,5 +1,5 @@
 import React from "react";
-import { AppProvider } from "./context/AppContext";
+import {AppProvider} from "./context/AppContext";
 import Layout from "./components/Layout";
 import Header from "./components/Header";
 import QuoteCarousel from "./components/QuoteCarousel";
@@ -13,14 +13,14 @@ import "./css/styles.css";
 function App() {
     return (
         <AppProvider>
-            <HeartAnimation />
+            <HeartAnimation/>
             <Layout>
-                <Header />
-                <QuoteCarousel />
-                <Counter />
-                <Milestones />
-                <Places />
-                <Gallery />
+                <Header/>
+                <QuoteCarousel/>
+                <Counter/>
+                <Milestones/>
+                <Places/>
+                <Gallery/>
             </Layout>
         </AppProvider>
     );

@@ -1,14 +1,9 @@
-.hover-grow,
-.hover-grow-sm {
+.hover-grow {
     transition: transform var(--transition-speed);
     cursor: pointer;
 }
 
 .hover-grow:hover {
-    transform: scale(1.06);
-}
-
-.hover-grow-sm:hover {
     transform: scale(1.03);
 }
 
@@ -31,5 +26,5 @@
 
 /* Section spacing */
 .section-spacing {
-    margin: var(--spacing-xl) 0;
+    margin: var(--spacing-lg) 0;
 } 

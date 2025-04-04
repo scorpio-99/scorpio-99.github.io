@@ -3,11 +3,8 @@
 @import './base/typography.css';
 @import './utils/animations.css';
 @import './utils/shared.css';
-@import './components/bucket-list.css';
 @import './components/counter.css';
-@import './components/fun-facts.css';
 @import './components/milestones.css';
 @import './components/places.css';
 @import './components/quotes.css';
-@import './components/timeline.css';
-@import './components/gallery.css'; 
+@import './components/gallery.css';

@@ -1,7 +1,6 @@
 // Constants
 export const ANNIVERSARY_DATE = new Date('2024-05-01T00:00:00');
 export const QUOTE_INTERVAL = 5000; // 5 seconds
-export const TIMELINE_INTERVAL = 5000; // 5 seconds
 export const DATE_FORMAT = 'dd.MM.yyyy';
 
 // Animation settings

@@ -155,7 +155,7 @@ function Gallery() {
         src: 'assets/gallery/leverkusen-face-hand.PNG',
         alt: 'tbd',
         caption: 'tbd',
-        category: 'date'
+        category: 'special'
       },
       {
         id: 21,

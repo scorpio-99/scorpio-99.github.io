@@ -95,44 +95,6 @@ const data = {
             description: "The City of Love ❤️"
         },
     ],
-
-    bucketList: [
-        {
-            item: "Visit Disneyland together",
-            status: "Soon"
-        },
-        {
-            item: "Travel to Paris together",
-            status: "Soon"
-        },
-        {
-            item: "Visiting sicily",
-            status: "Planning"
-        },
-        {
-            item: "Travel to Rome",
-            status: "Wishlist"
-        }
-    ],
-
-    funFacts: [
-        {
-            number: "147",
-            label: "Messages on First Day"
-        },
-        {
-            number: "5",
-            label: "Hours on First Date"
-        },
-        {
-            number: "5",
-            label: "Countries Explored Together"
-        },
-        {
-            number: "∞",
-            label: "Moments to Come"
-        }
-    ]
 };
 
 export default data; 

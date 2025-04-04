@@ -6,10 +6,6 @@ import QuoteCarousel from "./components/QuoteCarousel";
 import Counter from "./components/Counter";
 import Milestones from "./components/Milestones";
 import Places from "./components/Places";
-import Timeline from "./components/Timeline";
-import BucketList from "./components/BucketList";
-import FunFacts from "./components/FunFacts";
-import MusicPlayer from "./components/MusicPlayer";
 import Gallery from "./components/Gallery";
 import HeartAnimation from "./components/HeartAnimation";
 import "./css/styles.css";
@@ -24,11 +20,7 @@ function App() {
                 <Counter />
                 <Milestones />
                 <Places />
-                <Timeline />
                 <Gallery />
-                <BucketList />
-                <FunFacts />
-                <MusicPlayer />
             </Layout>
         </AppProvider>
     );

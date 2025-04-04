@@ -11,11 +11,26 @@
 
 /* Special styling for celebration mode */
 .milestone-celebration {
-    grid-column: 1 / -1; /* Span full width */
+    grid-column: 1 / -1;
+    position: relative;
+    overflow: visible;
+}
+
+.milestone-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .milestone-celebration .milestone-event {
     margin: var(--spacing-lg) 0;
+    font-size: 1.5rem;
+}
+
+.milestone-celebration .milestone-label {
+    font-size: 1.25rem;
+    color: var(--color-primary);
 }
 
 .milestone {

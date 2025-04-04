@@ -12,7 +12,6 @@ import {
 } from './milestones/MilestoneUtils';
 
 function Milestones() {
-    const currentDate = DateTime.now();
     const [milestones, setMilestones] = useState([]);
     const [todayMilestone, setTodayMilestone] = useState(null);
     const [nextMilestone, setNextMilestone] = useState(null);
@@ -47,8 +46,10 @@ function Milestones() {
         };
 
         updateMilestones();
-    }, [currentDate]);
+    }, []);
 
+    // Get current date for calculations
+    const currentDate = DateTime.now();
 
     // Calculate days until/since milestones
     const daysUntilNext = nextMilestone ?

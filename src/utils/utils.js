@@ -4,9 +4,6 @@ import {DATE_FORMAT} from "../data/constants";
 const utils = {
     formatDate: (date) => DateTime.fromJSDate(date).toFormat(DATE_FORMAT),
 
-    createRandomEmoji: (emojis) =>
-        emojis[Math.floor(Math.random() * emojis.length)],
-
     createElement: (className, text) => {
         const element = document.createElement('div');
         element.className = className;

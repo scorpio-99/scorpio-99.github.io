@@ -14,7 +14,7 @@ function HeartAnimation() {
         };
 
         const handleClick = (e) => {
-            createHeart(e.pageX, e.pageY);
+            createHeart(e.clientX, e.clientY);
         };
 
         document.addEventListener('click', handleClick);

@@ -53,7 +53,7 @@ function Gallery() {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [activeImage, images, activeCategory]);
 
-    const filteredImages = images.filter(img => img.category === activeCategory);
+    const filteredImages = images.filter(img => img.category === activeCategory).reverse();
 
     return (
         <Section card title="Our Memories" className="gallery-container">

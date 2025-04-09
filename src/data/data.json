@@ -81,248 +81,248 @@
   "galleryImages": [
     {
       "id": 1,
-      "src": "assets/gallery/airport-selfie.PNG",
-      "caption": "Ready for adventure! ✈️",
-      "date": "03.12.2024",
-      "category": "trips"
-    },
-    {
-      "id": 2,
-      "src": "assets/gallery/bavaria-selfie.PNG",
-      "caption": "Bavarian memories 🏰",
-      "date": "01.09.2024",
-      "category": "trips"
-    },
-    {
-      "id": 3,
-      "src": "assets/gallery/christmas-selfie.PNG",
-      "caption": "Merry Christmas! 🎄",
-      "date": "25.12.2024",
-      "category": "special"
-    },
-    {
-      "id": 4,
-      "src": "assets/gallery/christmas-selfie-hats.PNG",
-      "caption": "Santa's helpers 🎅",
-      "date": "25.12.2024",
-      "category": "special"
-    },
-    {
-      "id": 5,
-      "src": "assets/gallery/cologne-balloon-museum.PNG",
-      "caption": "Balloon art adventure 🎈",
-      "date": "19.05.2024",
-      "category": "dates"
-    },
-    {
-      "id": 6,
-      "src": "assets/gallery/cologne-gondola-selfie.PNG",
-      "caption": "Gondola ride in Cologne 🚡",
-      "date": "25.05.2024",
-      "category": "dates"
-    },
-    {
-      "id": 7,
-      "src": "assets/gallery/cologne-holding-hands.PNG",
-      "caption": "Walking together 👫",
-      "date": "25.05.2024",
-      "category": "dates"
-    },
-    {
-      "id": 8,
-      "src": "assets/gallery/disneyland-bnb-selfie.PNG",
-      "caption": "Disney dreams come true 🏰",
-      "date": "15.03.2025",
-      "category": "trips"
-    },
-    {
-      "id": 9,
-      "src": "assets/gallery/disneyland-selfie.PNG",
-      "caption": "Happiest place on earth ✨",
-      "date": "16.03.2025",
-      "category": "trips"
-    },
-    {
-      "id": 10,
-      "src": "assets/gallery/frankfurt-concert-travis.PNG",
-      "caption": "Travis Scott concert 🎵",
-      "date": "27.07.2024",
-      "category": "special"
-    },
-    {
-      "id": 11,
-      "src": "assets/gallery/garage-selfie.PNG",
-      "caption": "Late night vibes 🌙",
-      "date": "25.03.2025",
-      "category": "special"
-    },
-    {
-      "id": 12,
-      "src": "assets/gallery/home-birthday.PNG",
-      "caption": "Birthday celebration 🎂",
-      "date": "13.11.2024",
-      "category": "special"
-    },
-    {
-      "id": 13,
-      "src": "assets/gallery/munich-concert-adele.PNG",
-      "caption": "Adele in Munich 🎤",
-      "date": "31.08.2024",
-      "category": "special"
-    },
-    {
-      "id": 14,
-      "src": "assets/gallery/paris-eiffeltower.PNG",
-      "caption": "Eiffel Tower magic 🗼",
-      "date": "16.03.2025",
-      "category": "trips"
-    },
-    {
-      "id": 15,
-      "src": "assets/gallery/paris-eiffeltower-selfie.PNG",
-      "caption": "Parisian memories ✨",
-      "date": "16.03.2025",
-      "category": "trips"
-    },
-    {
-      "id": 16,
-      "src": "assets/gallery/paris-selfie.PNG",
-      "caption": "City of Love ❤️",
-      "date": "16.03.2025",
-      "category": "trips"
-    },
-    {
-      "id": 17,
-      "src": "assets/gallery/rovaniemi-reindeer.PNG",
-      "caption": "Meeting Santa's reindeers 🦌",
-      "date": "04.12.2024",
-      "category": "trips"
-    },
-    {
-      "id": 18,
-      "src": "assets/gallery/rovaniemi-river.PNG",
-      "caption": "Arctic beauty ❄️",
-      "date": "04.12.2024",
-      "category": "trips"
-    },
-    {
-      "id": 19,
-      "src": "assets/gallery/rovaniemi-selfie.PNG",
-      "caption": "Winter wonderland ⛄",
-      "date": "06.12.2024",
-      "category": "trips"
-    },
-    {
-      "id": 20,
-      "src": "assets/gallery/leverkusen-face-hand.PNG",
-      "caption": "Silly moments 😊",
-      "date": "24.05.2024",
-      "category": "special"
-    },
-    {
-      "id": 21,
-      "src": "assets/gallery/duesseldorf-fair-heart.PNG",
-      "caption": "Fair fun ❤️",
-      "date": "13.07.2024",
-      "category": "dates"
-    },
-    {
-      "id": 22,
-      "src": "assets/gallery/baby-goats.PNG",
-      "caption": "Goat cuddles 🐐",
-      "date": "21.04.2024",
-      "category": "dates"
-    },
-    {
-      "id": 23,
-      "src": "assets/gallery/cologne-balloon-museum-heart.PNG",
-      "caption": "Balloon love 💕",
-      "date": "19.05.2024",
-      "category": "dates"
-    },
-    {
-      "id": 24,
-      "src": "assets/gallery/cologne-diamond-painting-luca.PNG",
-      "caption": "Creative date 🎨",
-      "date": "03.08.2024",
-      "category": "dates"
-    },
-    {
-      "id": 25,
-      "src": "assets/gallery/cologne-diamond-painting-thuy.PNG",
-      "caption": "Diamond painting together ✨",
-      "date": "03.08.2024",
-      "category": "dates"
-    },
-    {
-      "id": 26,
-      "src": "assets/gallery/cologne-ferris-wheel.PNG",
-      "caption": "Ferris wheel views 🎡",
-      "date": "30.03.2024",
-      "category": "dates"
-    },
-    {
-      "id": 27,
-      "src": "assets/gallery/cologne-picnic.PNG",
-      "caption": "Picnic in the park 🌳",
-      "date": "05.05.2024",
-      "category": "dates"
-    },
-    {
-      "id": 28,
-      "src": "assets/gallery/cologne-picnic-sleeping.PNG",
-      "caption": "Peaceful nap time 😴",
-      "date": "25.05.2024",
-      "category": "dates"
-    },
-    {
-      "id": 29,
-      "src": "assets/gallery/como-airport-teddy.PNG",
-      "caption": "Travel buddy 🧸",
-      "date": "01.05.2024",
-      "category": "trips"
-    },
-    {
-      "id": 30,
-      "src": "assets/gallery/como-boat.PNG",
-      "caption": "Lake Como cruise 🚤",
-      "date": "30.04.2024",
-      "category": "trips"
-    },
-    {
-      "id": 31,
-      "src": "assets/gallery/como-breakfast.PNG",
-      "caption": "Italian breakfast ☕",
-      "date": "30.04.2024",
-      "category": "trips"
-    },
-    {
-      "id": 32,
-      "src": "assets/gallery/duesseldorf-ceramic-painting.PNG",
-      "caption": "Artistic date 🎨",
-      "date": "20.04.2024",
-      "category": "dates"
-    },
-    {
-      "id": 33,
-      "src": "assets/gallery/duesseldorf-fooding.PNG",
-      "caption": "Foodie adventures 🍽️",
-      "date": "12.04.2024",
-      "category": "dates"
-    },
-    {
-      "id": 34,
       "src": "assets/gallery/fair-big-teddy.PNG",
       "caption": "Fair prize win 🧸",
       "date": "30.03.2024",
       "category": "dates"
     },
     {
-      "id": 35,
+      "id": 2,
+      "src": "assets/gallery/cologne-ferris-wheel.PNG",
+      "caption": "Ferris wheel views 🎡",
+      "date": "30.03.2024",
+      "category": "dates"
+    },
+    {
+      "id": 3,
+      "src": "assets/gallery/duesseldorf-fooding.PNG",
+      "caption": "Foodie adventures 🍽️",
+      "date": "12.04.2024",
+      "category": "dates"
+    },
+    {
+      "id": 4,
       "src": "assets/gallery/flowers.PNG",
       "caption": "Beautiful flowers 💐",
       "date": "12.04.2024",
       "category": "special"
+    },
+    {
+      "id": 5,
+      "src": "assets/gallery/duesseldorf-ceramic-painting.PNG",
+      "caption": "Artistic date 🎨",
+      "date": "20.04.2024",
+      "category": "dates"
+    },
+    {
+      "id": 6,
+      "src": "assets/gallery/baby-goats.PNG",
+      "caption": "Goat cuddles 🐐",
+      "date": "21.04.2024",
+      "category": "dates"
+    },
+    {
+      "id": 7,
+      "src": "assets/gallery/como-boat.PNG",
+      "caption": "Lake Como cruise 🚤",
+      "date": "30.04.2024",
+      "category": "trips"
+    },
+    {
+      "id": 8,
+      "src": "assets/gallery/como-breakfast.PNG",
+      "caption": "Italian breakfast ☕",
+      "date": "30.04.2024",
+      "category": "trips"
+    },
+    {
+      "id": 9,
+      "src": "assets/gallery/como-airport-teddy.PNG",
+      "caption": "Travel buddy 🧸",
+      "date": "01.05.2024",
+      "category": "trips"
+    },
+    {
+      "id": 10,
+      "src": "assets/gallery/cologne-picnic.PNG",
+      "caption": "Picnic in the park 🌳",
+      "date": "05.05.2024",
+      "category": "dates"
+    },
+    {
+      "id": 11,
+      "src": "assets/gallery/cologne-balloon-museum.PNG",
+      "caption": "Balloon art adventure 🎈",
+      "date": "19.05.2024",
+      "category": "dates"
+    },
+    {
+      "id": 12,
+      "src": "assets/gallery/cologne-balloon-museum-heart.PNG",
+      "caption": "Balloon love 💕",
+      "date": "19.05.2024",
+      "category": "dates"
+    },
+    {
+      "id": 13,
+      "src": "assets/gallery/leverkusen-face-hand.PNG",
+      "caption": "Silly moments 😊",
+      "date": "24.05.2024",
+      "category": "special"
+    },
+    {
+      "id": 14,
+      "src": "assets/gallery/cologne-gondola-selfie.PNG",
+      "caption": "Gondola ride in Cologne 🚡",
+      "date": "25.05.2024",
+      "category": "dates"
+    },
+    {
+      "id": 15,
+      "src": "assets/gallery/cologne-holding-hands.PNG",
+      "caption": "Walking together 👫",
+      "date": "25.05.2024",
+      "category": "dates"
+    },
+    {
+      "id": 16,
+      "src": "assets/gallery/cologne-picnic-sleeping.PNG",
+      "caption": "Peaceful nap time 😴",
+      "date": "25.05.2024",
+      "category": "dates"
+    },
+    {
+      "id": 17,
+      "src": "assets/gallery/frankfurt-concert-travis.PNG",
+      "caption": "Travis Scott concert 🎵",
+      "date": "27.07.2024",
+      "category": "special"
+    },
+    {
+      "id": 18,
+      "src": "assets/gallery/duesseldorf-fair-heart.PNG",
+      "caption": "Fair fun ❤️",
+      "date": "13.07.2024",
+      "category": "dates"
+    },
+    {
+      "id": 19,
+      "src": "assets/gallery/cologne-diamond-painting-luca.PNG",
+      "caption": "Creative date 🎨",
+      "date": "03.08.2024",
+      "category": "dates"
+    },
+    {
+      "id": 20,
+      "src": "assets/gallery/cologne-diamond-painting-thuy.PNG",
+      "caption": "Diamond painting together ✨",
+      "date": "03.08.2024",
+      "category": "dates"
+    },
+    {
+      "id": 21,
+      "src": "assets/gallery/munich-concert-adele.PNG",
+      "caption": "Adele in Munich 🎤",
+      "date": "31.08.2024",
+      "category": "special"
+    },
+    {
+      "id": 22,
+      "src": "assets/gallery/bavaria-selfie.PNG",
+      "caption": "Bavarian memories 🏰",
+      "date": "01.09.2024",
+      "category": "trips"
+    },
+    {
+      "id": 23,
+      "src": "assets/gallery/home-birthday.PNG",
+      "caption": "Birthday celebration 🎂",
+      "date": "13.11.2024",
+      "category": "special"
+    },
+    {
+      "id": 24,
+      "src": "assets/gallery/airport-selfie.PNG",
+      "caption": "Ready for adventure! ✈️",
+      "date": "03.12.2024",
+      "category": "trips"
+    },
+    {
+      "id": 25,
+      "src": "assets/gallery/rovaniemi-reindeer.PNG",
+      "caption": "Meeting Santa's reindeers 🦌",
+      "date": "04.12.2024",
+      "category": "trips"
+    },
+    {
+      "id": 26,
+      "src": "assets/gallery/rovaniemi-river.PNG",
+      "caption": "Arctic beauty ❄️",
+      "date": "04.12.2024",
+      "category": "trips"
+    },
+    {
+      "id": 27,
+      "src": "assets/gallery/rovaniemi-selfie.PNG",
+      "caption": "Winter wonderland ⛄",
+      "date": "06.12.2024",
+      "category": "trips"
+    },
+    {
+      "id": 28,
+      "src": "assets/gallery/christmas-selfie.PNG",
+      "caption": "Merry Christmas! 🎄",
+      "date": "25.12.2024",
+      "category": "special"
+    },
+    {
+      "id": 29,
+      "src": "assets/gallery/christmas-selfie-hats.PNG",
+      "caption": "Santa's helpers 🎅",
+      "date": "25.12.2024",
+      "category": "special"
+    },
+    {
+      "id": 30,
+      "src": "assets/gallery/garage-selfie.PNG",
+      "caption": "Late night vibes 🌙",
+      "date": "25.03.2025",
+      "category": "special"
+    },
+    {
+      "id": 31,
+      "src": "assets/gallery/disneyland-bnb-selfie.PNG",
+      "caption": "Disney dreams come true 🏰",
+      "date": "15.03.2025",
+      "category": "trips"
+    },
+    {
+      "id": 32,
+      "src": "assets/gallery/disneyland-selfie.PNG",
+      "caption": "Happiest place on earth ✨",
+      "date": "16.03.2025",
+      "category": "trips"
+    },
+    {
+      "id": 33,
+      "src": "assets/gallery/paris-eiffeltower.PNG",
+      "caption": "Eiffel Tower magic 🗼",
+      "date": "16.03.2025",
+      "category": "trips"
+    },
+    {
+      "id": 34,
+      "src": "assets/gallery/paris-eiffeltower-selfie.PNG",
+      "caption": "Parisian memories ✨",
+      "date": "16.03.2025",
+      "category": "trips"
+    },
+    {
+      "id": 35,
+      "src": "assets/gallery/paris-selfie.PNG",
+      "caption": "City of Love ❤️",
+      "date": "16.03.2025",
+      "category": "trips"
     }
   ]
 } 

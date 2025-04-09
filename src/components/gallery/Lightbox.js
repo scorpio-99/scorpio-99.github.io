@@ -13,8 +13,11 @@ function Lightbox({ image, onClose, onNavigate }) {
       </button>
 
       <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-        <img src={image.src} alt={image.alt} />
-        <div className="lightbox-caption">{image.caption}</div>
+        <img src={image.src} alt={image.src} />
+        <div className="lightbox-info">
+          {image.date && <div className="lightbox-date">{image.date}</div>}
+          <div className="lightbox-caption">{image.caption}</div>
+        </div>
       </div>
 
       <button className="nav-button next" onClick={(e) => {

@@ -7,12 +7,11 @@ import data from '../data/data.json';
 
 function Gallery() {
     const [activeImage, setActiveImage] = useState(null);
-    const [activeCategory, setActiveCategory] = useState('all');
+    const [activeCategory, setActiveCategory] = useState('dates');
     const [images, setImages] = useState([]);
 
     // Categories for the gallery
     const categories = [
-        {id: 'all', name: 'All Memories'},
         {id: 'dates', name: 'Our Dates'},
         {id: 'trips', name: 'Our Trips'},
         {id: 'special', name: 'Special Moments'}
@@ -33,22 +32,12 @@ function Gallery() {
     };
 
     const navigateImage = (direction) => {
-        const filteredImages = activeCategory === 'all'
-            ? images
-            : images.filter(img => img.category === activeCategory);
-
+        const filteredImages = images.filter(img => img.category === activeCategory);
         if (filteredImages.length === 0) return;
 
-        let newIndex;
-        if (activeCategory === 'all') {
-            const currentIndex = images.findIndex(img => img.id === activeImage.id);
-            newIndex = (currentIndex + direction + images.length) % images.length;
-            setActiveImage(images[newIndex]);
-        } else {
-            const categoryIndex = filteredImages.findIndex(img => img.id === activeImage.id);
-            newIndex = (categoryIndex + direction + filteredImages.length) % filteredImages.length;
-            setActiveImage(filteredImages[newIndex]);
-        }
+        const categoryIndex = filteredImages.findIndex(img => img.id === activeImage.id);
+        const newIndex = (categoryIndex + direction + filteredImages.length) % filteredImages.length;
+        setActiveImage(filteredImages[newIndex]);
     };
 
     const handleKeyDown = (e) => {
@@ -64,9 +53,7 @@ function Gallery() {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [activeImage, images, activeCategory]);
 
-    const filteredImages = activeCategory === 'all'
-        ? images
-        : images.filter(img => img.category === activeCategory);
+    const filteredImages = images.filter(img => img.category === activeCategory);
 
     return (
         <Section card title="Our Memories" className="gallery-container">

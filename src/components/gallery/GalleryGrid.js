@@ -17,7 +17,7 @@ function GalleryGrid({ images, onImageClick }) {
           className="gallery-item"
           onClick={() => onImageClick(image)}
         >
-          <img src={image.src} alt={image.alt} />
+          <img src={image.src} alt={image.src} />
           <div className="gallery-caption">
             <span>{image.caption}</span>
           </div>

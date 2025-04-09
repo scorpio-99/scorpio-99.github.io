@@ -225,6 +225,104 @@
       "alt": "tbd",
       "caption": "tbd",
       "category": "dates"
+    },
+    {
+      "id": 22,
+      "src": "assets/gallery/baby-goats.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "dates"
+    },
+    {
+      "id": 23,
+      "src": "assets/gallery/cologne-balloon-museum-heart.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "dates"
+    },
+    {
+      "id": 24,
+      "src": "assets/gallery/cologne-diamond-painting-luca.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "dates"
+    },
+    {
+      "id": 25,
+      "src": "assets/gallery/cologne-diamond-painting-thuy.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "dates"
+    },
+    {
+      "id": 26,
+      "src": "assets/gallery/cologne-ferris-wheel.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "dates"
+    },
+    {
+      "id": 27,
+      "src": "assets/gallery/cologne-picnic.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "dates"
+    },
+    {
+      "id": 28,
+      "src": "assets/gallery/cologne-picnic-sleeping.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "dates"
+    },
+    {
+      "id": 29,
+      "src": "assets/gallery/como-airport-teddy.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "trips"
+    },
+    {
+      "id": 30,
+      "src": "assets/gallery/como-boat.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "trips"
+    },
+    {
+      "id": 31,
+      "src": "assets/gallery/como-breakfast.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "trips"
+    },
+    {
+      "id": 32,
+      "src": "assets/gallery/duesseldorf-ceramic-painting.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "dates"
+    },
+    {
+      "id": 33,
+      "src": "assets/gallery/duesseldorf-fooding.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "dates"
+    },
+    {
+      "id": 34,
+      "src": "assets/gallery/fair-big-teddy.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "dates"
+    },
+    {
+      "id": 35,
+      "src": "assets/gallery/flowers.PNG",
+      "alt": "tbd",
+      "caption": "tbd",
+      "category": "special"
     }
   ]
 } 

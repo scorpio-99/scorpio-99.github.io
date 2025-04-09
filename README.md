@@ -51,9 +51,9 @@ To add your own photos to the gallery:
 ## 📝 Customization
 You can easily customize the application by modifying:
 
-- `src/data/data.js` - Update quotes, events, places, bucket list items, and fun facts
-- `src/data/constants.js` - Change the anniversary date and other settings
-- `src/css/base/variables.css` - Modify colors, spacing, and other design variables
+- `src/data/data.json` - update data
+- `src/data/constants.js` - change settings
+- `src/css/base/variables.css` - modify design variables
 
 ## 📱 Responsive Design
 The application is fully responsive and works well on:

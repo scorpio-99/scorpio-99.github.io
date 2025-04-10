@@ -1,18 +1,18 @@
 @import '../base/variables';
+@import '../utils/mixins';
 
 .quote-carousel {
     height: 125px;
-}
 
-.quote-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-}
+    .quote-wrapper {
+        @include flex-column;
+        justify-content: center;
+        height: 100%;
 
-.quote-wrapper .heart {
-    font-size: 1.5rem;
-    padding-bottom: 5px;
-    color: $color-primary;
+        .heart {
+            font-size: 1.5rem;
+            padding-bottom: $spacing-xs;
+            color: $color-primary;
+        }
+    }
 } 

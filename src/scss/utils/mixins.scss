@@ -1,9 +1,24 @@
+@import '../base/variables';
+
+// Flexbox
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Effects
 @mixin hover-effect {
   transition: transform $transition-speed;
   cursor: pointer;
@@ -17,4 +32,37 @@
   background: $color-overlay;
   border-radius: $border-radius-md;
   padding: $spacing-lg;
+}
+
+// Responsive
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: ($breakpoint-mobile + 1)) and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: ($breakpoint-tablet + 1)) {
+    @content;
+  }
+}
+
+// Typography
+@mixin title-text {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px $color-shadow;
+  padding: $spacing-md 0;
+}
+
+@mixin subtitle-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: $spacing-lg;
 }

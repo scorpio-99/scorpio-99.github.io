@@ -1,21 +1,21 @@
 @import '../base/variables';
+@import '../utils/mixins';
 
 .counter {
-    display: flex;
+    @include flex-center;
     flex-wrap: wrap;
     gap: $spacing-sm;
-    justify-content: center;
-}
 
-.time-block {
-    flex: 1;
-}
+    .time-block {
+        flex: 1;
 
-.time-block .number {
-    font-size: 2rem;
-    font-weight: bold;
-}
+        .number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
 
-.time-block .label {
-    font-size: 0.8rem;
+        .label {
+            font-size: 0.8rem;
+        }
+    }
 }

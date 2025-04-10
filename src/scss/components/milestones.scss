@@ -1,21 +1,35 @@
 @import '../base/variables';
+@import '../utils/mixins';
 
 .milestones {
     position: relative;
     overflow: visible;
+
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacing-lg;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
 }
 
-.milestones-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $spacing-lg;
-}
-
-/* Special styling for celebration mode */
 .milestone-celebration {
     grid-column: 1 / -1;
     position: relative;
     overflow: visible;
+
+    .milestone-event {
+        margin: $spacing-lg 0;
+        font-size: 1.5rem;
+    }
+
+    .milestone-label {
+        font-size: 1.25rem;
+        color: $color-primary;
+    }
 }
 
 .milestone-container {
@@ -25,63 +39,45 @@
     z-index: 1;
 }
 
-.milestone-celebration .milestone-event {
-    margin: $spacing-lg 0;
-    font-size: 1.5rem;
-}
-
-.milestone-celebration .milestone-label {
-    font-size: 1.25rem;
-    color: $color-primary;
-}
-
 .milestone {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     align-items: center;
     text-align: center;
     padding: $spacing-xxl;
     position: relative;
     overflow: hidden;
-}
 
-.milestone::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(to right, transparent, $color-primary, transparent);
-}
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(to right, transparent, $color-primary, transparent);
+    }
 
-.milestone-label {
-    color: $color-primary;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: $spacing-md;
-}
+    &-label {
+        color: $color-primary;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: $spacing-md;
+    }
 
-.milestone-content {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-sm;
-}
+    &-content {
+        @include flex-column;
+        gap: $spacing-sm;
+    }
 
-.milestone-event {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: $spacing-xs;
-}
+    &-event {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: $spacing-xs;
+    }
 
-.milestone-days {
-    color: $color-primary;
-    margin-top: $spacing-xs;
-}
-
-@media (max-width: 600px) {
-    .milestones-container {
-        grid-template-columns: 1fr;
+    &-days {
+        color: $color-primary;
+        margin-top: $spacing-xs;
     }
 } 

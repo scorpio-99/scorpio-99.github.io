@@ -193,17 +193,17 @@
     },
     {
       "id": 17,
-      "src": "assets/gallery/frankfurt-concert-travis.PNG",
-      "caption": "Travis Scott concert 🎵",
-      "date": "27.07.2024",
-      "category": "special"
-    },
-    {
-      "id": 18,
       "src": "assets/gallery/duesseldorf-fair-heart.PNG",
       "caption": "Fair fun ❤️",
       "date": "13.07.2024",
       "category": "dates"
+    },
+    {
+      "id": 18,
+      "src": "assets/gallery/frankfurt-concert-travis.PNG",
+      "caption": "Travis Scott concert 🎵",
+      "date": "27.07.2024",
+      "category": "special"
     },
     {
       "id": 19,
@@ -235,94 +235,129 @@
     },
     {
       "id": 23,
+      "src": "assets/gallery/bonn-fair-hello-kitty-plushie.PNG",
+      "caption": "Hello Kitty cuteness 🎀",
+      "date": "07.09.2024",
+      "category": "dates"
+    },
+    {
+      "id": 24,
+      "src": "assets/gallery/cologne-squishmallow-cuddle.PNG",
+      "caption": "Squishy cuddles 🧸",
+      "date": "12.10.2024",
+      "category": "dates"
+    },
+    {
+      "id": 25,
       "src": "assets/gallery/home-birthday.PNG",
       "caption": "Birthday celebration 🎂",
       "date": "13.11.2024",
       "category": "special"
     },
     {
-      "id": 24,
+      "id": 26,
       "src": "assets/gallery/airport-selfie.PNG",
       "caption": "Ready for adventure! ✈️",
       "date": "03.12.2024",
       "category": "trips"
     },
     {
-      "id": 25,
+      "id": 27,
       "src": "assets/gallery/rovaniemi-reindeer.PNG",
       "caption": "Meeting Santa's reindeers 🦌",
       "date": "04.12.2024",
       "category": "trips"
     },
     {
-      "id": 26,
+      "id": 28,
       "src": "assets/gallery/rovaniemi-river.PNG",
       "caption": "Arctic beauty ❄️",
       "date": "04.12.2024",
       "category": "trips"
     },
     {
-      "id": 27,
+      "id": 29,
       "src": "assets/gallery/rovaniemi-selfie.PNG",
       "caption": "Winter wonderland ⛄",
       "date": "06.12.2024",
       "category": "trips"
     },
     {
-      "id": 28,
+      "id": 30,
       "src": "assets/gallery/christmas-selfie.PNG",
       "caption": "Merry Christmas! 🎄",
       "date": "25.12.2024",
       "category": "special"
     },
     {
-      "id": 29,
+      "id": 31,
       "src": "assets/gallery/christmas-selfie-hats.PNG",
       "caption": "Santa's helpers 🎅",
       "date": "25.12.2024",
       "category": "special"
     },
     {
-      "id": 30,
-      "src": "assets/gallery/garage-selfie.PNG",
-      "caption": "Late night vibes 🌙",
-      "date": "25.03.2025",
+      "id": 32,
+      "src": "assets/gallery/phantasialand-birthday.PNG",
+      "caption": "Birthday at Phantasialand 🎢",
+      "date": "20.01.2025",
       "category": "special"
     },
     {
-      "id": 31,
+      "id": 33,
+      "src": "assets/gallery/cologne-valentinesday.PNG",
+      "caption": "Valentine's Day love 💝",
+      "date": "14.02.2025",
+      "category": "dates"
+    },
+    {
+      "id": 34,
+      "src": "assets/gallery/cologne-carnival-selfie.PNG",
+      "caption": "Carnival fun 🎭",
+      "date": "02.03.2025",
+      "category": "special"
+    },
+    {
+      "id": 35,
       "src": "assets/gallery/disneyland-bnb-selfie.PNG",
       "caption": "Disney dreams come true 🏰",
       "date": "15.03.2025",
       "category": "trips"
     },
     {
-      "id": 32,
+      "id": 36,
       "src": "assets/gallery/disneyland-selfie.PNG",
       "caption": "Happiest place on earth ✨",
       "date": "16.03.2025",
       "category": "trips"
     },
     {
-      "id": 33,
+      "id": 37,
       "src": "assets/gallery/paris-eiffeltower.PNG",
       "caption": "Eiffel Tower magic 🗼",
       "date": "16.03.2025",
       "category": "trips"
     },
     {
-      "id": 34,
+      "id": 38,
       "src": "assets/gallery/paris-eiffeltower-selfie.PNG",
       "caption": "Parisian memories ✨",
       "date": "16.03.2025",
       "category": "trips"
     },
     {
-      "id": 35,
+      "id": 39,
       "src": "assets/gallery/paris-selfie.PNG",
       "caption": "City of Love ❤️",
       "date": "16.03.2025",
       "category": "trips"
+    },
+    {
+      "id": 40,
+      "src": "assets/gallery/garage-selfie.PNG",
+      "caption": "Late night vibes 🌙",
+      "date": "25.03.2025",
+      "category": "special"
     }
   ]
 } 

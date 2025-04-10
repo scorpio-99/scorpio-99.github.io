@@ -7,7 +7,7 @@ import Milestones from "./components/Milestones";
 import Places from "./components/Places";
 import Gallery from "./components/Gallery";
 import HeartAnimation from "./components/HeartAnimation";
-import "./css/styles.css";
+import "./scss/styles.scss";
 
 function App() {
     return (

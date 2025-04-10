@@ -1,14 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {DateTime} from 'luxon';
-
-import utils from '../utils/utils';
 import data from '../data/data.json';
 import TodayMilestone from './milestones/TodayMilestone';
 import MilestoneCard from './milestones/MilestoneCard';
-import { 
-    findTodayMilestone, 
-    generateMonthlyMilestones, 
-    generateDayMilestones 
+import {
+    calculateDaysBetween,
+    findTodayMilestone,
+    generateDayMilestones,
+    generateMonthlyMilestones
 } from './milestones/MilestoneUtils';
 
 function Milestones() {
@@ -17,11 +15,10 @@ function Milestones() {
     const [nextMilestone, setNextMilestone] = useState(null);
     const [prevMilestone, setPrevMilestone] = useState(null);
 
-    // Generate milestones
     useEffect(() => {
         const updateMilestones = () => {
-            const now = DateTime.now();
-            const anniversary = DateTime.fromJSDate(new Date(data.anniversaryDate));
+            const now = new Date();
+            const anniversary = new Date(data.anniversaryDate);
 
             // Generate all milestones
             const allMilestones = [
@@ -37,8 +34,8 @@ function Milestones() {
 
             // If no milestone today, find next and previous
             if (!today) {
-                const next = allMilestones.find(m => DateTime.fromJSDate(m.date) > now);
-                const prev = [...allMilestones].reverse().find(m => DateTime.fromJSDate(m.date) <= now);
+                const next = allMilestones.find(m => m.date > now);
+                const prev = [...allMilestones].reverse().find(m => m.date <= now);
 
                 setNextMilestone(next);
                 setPrevMilestone(prev);
@@ -48,15 +45,9 @@ function Milestones() {
         updateMilestones();
     }, []);
 
-    // Get current date for calculations
-    const currentDate = DateTime.now();
-
     // Calculate days until/since milestones
-    const daysUntilNext = nextMilestone ?
-        utils.calculateDaysBetween(currentDate.toJSDate(), nextMilestone.date) : 0;
-
-    const daysSincePrev = prevMilestone ?
-        utils.calculateDaysBetween(prevMilestone.date, currentDate.toJSDate()) : 0;
+    const daysUntilNext = nextMilestone ? calculateDaysBetween(new Date(), nextMilestone.date) : 0;
+    const daysSincePrev = prevMilestone ? calculateDaysBetween(prevMilestone.date, new Date()) : 0;
 
     return (
         <div className="milestones">

@@ -17,27 +17,3 @@
         opacity: 0;
     }
 }
-
-/* milestones celebration */
-.emoji-confetti {
-    position: absolute;
-    user-select: none;
-    pointer-events: none;
-    animation: confettiFall 3s ease-out forwards;
-    z-index: 1000;
-}
-
-@keyframes confettiFall {
-    0% {
-        transform: translateY(0) rotate(0deg) scale(0);
-        opacity: 0;
-    }
-    10% {
-        transform: translateY(10px) rotate(45deg) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100px) rotate(360deg) scale(0.5);
-        opacity: 0;
-    }
-} 

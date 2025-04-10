@@ -1,5 +1,5 @@
 export const QUOTE_INTERVAL = 5000; // 5 seconds
-export const DATE_FORMAT = 'dd.MM.yyyy';
+export const DATE_FORMAT = 'dd. MMMM, yyyy';
 
 // Animation settings
 export const ANIMATION_SETTINGS = {

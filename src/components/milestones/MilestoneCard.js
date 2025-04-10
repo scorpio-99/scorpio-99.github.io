@@ -1,7 +1,7 @@
 import React from 'react';
 import {format} from 'date-fns';
 import Section from '../common/Section';
-import {DATE_FORMAT} from '../../data/constants'
+import {DATE_FORMAT} from '../../data/constants';
 
 function MilestoneCard({label, milestone, days}) {
     if (!milestone) return null;

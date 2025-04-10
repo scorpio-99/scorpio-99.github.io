@@ -1,4 +1,6 @@
-@media (max-width: 800px) {
+@import 'variables';
+
+@media (max-width: $breakpoint-mobile) {
   #root {
     margin: 0 !important;
   }

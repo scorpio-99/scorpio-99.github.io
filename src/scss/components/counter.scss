@@ -1,7 +1,9 @@
+@import '../base/variables';
+
 .counter {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-sm);
+    gap: $spacing-sm;
     justify-content: center;
 }
 

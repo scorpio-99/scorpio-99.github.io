@@ -1,37 +1,53 @@
-:root {
-    /* General */
-    --content-width: 800px;
-    --map-height: 400px;
-    --transition-speed: 0.3s;
-    --shadow-default: 0 8px 32px var(--color-shadow);
+// Colors
+$color-pink-light: #e6a5a0;
+$color-pink-dark: #ff6b70;
+$color-pink-accent: #ff3355;
+$color-white: #fff;
+$color-lightgrey: #a8a8a8;
 
-    /* Spacing */
-    --spacing-xs: 5px;
-    --spacing-sm: 10px;
-    --spacing-md: 15px;
-    --spacing-lg: 20px;
-    --spacing-xl: 25px;
-    --spacing-xxl: 30px;
+// Functional Colors
+$color-primary: $color-pink-accent;
+$color-secondary: $color-pink-dark;
+$color-text: $color-white;
+$color-text-secondary: $color-lightgrey;
+$color-background: linear-gradient(45deg, $color-pink-dark, $color-pink-light);
+$color-overlay: rgba(255, 255, 255, 0.15);
+$color-overlay-hover: rgba(255, 255, 255, 0.25);
+$color-shadow: rgba(0, 0, 0, 0.1);
 
-    /* Base Colors */
-    --color-pink-light: #e6a5a0;
-    --color-pink-dark: #ff6b70;
-    --color-pink-accent: #ff3355;
-    --color-white: #fff;
-    --color-lightgrey: #a8a8a8;
+// Spacing
+$spacing-xs: 5px;
+$spacing-sm: 10px;
+$spacing-md: 15px;
+$spacing-lg: 20px;
+$spacing-xl: 25px;
+$spacing-xxl: 30px;
 
-    /* Functional Colors */
-    --color-primary: var(--color-pink-accent);
-    --color-secondary: var(--color-pink-dark);
-    --color-text: var(--color-white);
-    --color-text-secondary: var(--color-lightgrey);
-    --color-background: linear-gradient(45deg, var(--color-pink-dark), var(--color-pink-light));
-    --color-overlay: rgba(255, 255, 255, 0.15);
-    --color-overlay-hover: rgba(255, 255, 255, 0.25);
-    --color-shadow: rgba(0, 0, 0, 0.1);
+// Layout
+$content-width: 800px;
+$map-height: 400px;
 
-    /* Border Radius */
-    --border-radius-sm: 8px;
-    --border-radius-md: 10px;
-    --border-radius-lg: 15px;
+// Breakpoints
+$breakpoint-mobile: 800px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1200px;
+
+// Border Radius
+$border-radius-sm: 8px;
+$border-radius-md: 10px;
+$border-radius-lg: 15px;
+
+// Transitions
+$transition-speed: 0.3s;
+
+// Shadows
+$shadow-default: 0 8px 32px $color-shadow;
+
+// Functions
+@function spacing($multiplier: 1) {
+  @return $spacing-md * $multiplier;
+}
+
+@function shadow($opacity: 0.1) {
+  @return 0 8px 32px rgba(0, 0, 0, $opacity);
 } 

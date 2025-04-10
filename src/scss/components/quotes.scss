@@ -1,3 +1,5 @@
+@import '../base/variables';
+
 .quote-carousel {
     height: 125px;
 }
@@ -12,5 +14,5 @@
 .quote-wrapper .heart {
     font-size: 1.5rem;
     padding-bottom: 5px;
-    color: var(--color-primary);
+    color: $color-primary;
 } 

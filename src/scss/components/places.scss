@@ -1,7 +1,9 @@
+@import '../base/variables';
+
 .our-places #map {
-    height: var(--map-height);
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-default);
+    height: $map-height;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-default;
 }
 
 /* Popup styles */
@@ -12,17 +14,17 @@
 }
 
 .place-popup .place-name {
-    color: var(--color-primary);
+    color: $color-primary;
     font-weight: bold;
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: $spacing-xs;
 }
 
 .place-popup .place-date {
-    color: var(--color-text-secondary);
+    color: $color-text-secondary;
 }
 
 .place-popup .place-description {
-    margin-top: var(--spacing-sm);
+    margin-top: $spacing-sm;
 }
 
 .place-popup .places-embed-image {
@@ -32,20 +34,20 @@
 /* Map controls */
 .leaflet-control-zoom {
     border: none !important;
-    margin: var(--spacing-md) var(--spacing-md) 0 0 !important;
+    margin: $spacing-md $spacing-md 0 0 !important;
 }
 
 .leaflet-control-zoom-in,
 .leaflet-control-zoom-out {
     border: none !important;
-    border-radius: var(--border-radius-sm) !important;
-    margin-bottom: var(--spacing-xs) !important;
-    box-shadow: var(--shadow-default) !important;
+    border-radius: $border-radius-sm !important;
+    margin-bottom: $spacing-xs !important;
+    box-shadow: $shadow-default !important;
 }
 
 .leaflet-control-zoom-in span,
 .leaflet-control-zoom-out span {
-    color: var(--color-primary);
+    color: $color-primary;
 }
 
 .leaflet-popup-close-button,

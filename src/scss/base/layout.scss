@@ -1,8 +1,10 @@
+@import 'variables';
+@import '../utils/mixins';
+
 body {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     text-align: center;
-    background: var(--color-background);
+    background: $color-background;
     margin: 0;
     box-sizing: border-box;
 }
@@ -13,18 +15,18 @@ body {
 }
 
 #root {
-    margin: var(--spacing-xl);
-    box-shadow: var(--shadow-default);
+    margin: $spacing-xl;
+    box-shadow: $shadow-default;
     width: 100%;
-    max-width: var(--content-width);
-    background: var(--color-overlay);
-    border-radius: var(--border-radius-md);
+    max-width: $content-width;
+    background: $color-overlay;
+    border-radius: $border-radius-md;
 }
 
 .container {
-    padding: var(--spacing-xl);
-}
+    padding: $spacing-xl;
 
-.container > div:not(:last-child) {
-    margin-bottom: var(--spacing-xl);
+    > div:not(:last-child) {
+        margin-bottom: $spacing-xl;
+    }
 }

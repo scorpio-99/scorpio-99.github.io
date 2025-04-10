@@ -1,12 +1,11 @@
+@import '../base/variables';
+
 .card {
-    background: var(--color-overlay);
-    border-radius: var(--border-radius-md);
-    padding: var(--spacing-lg);
+    @include card-style;
 }
 
 .hover-grow {
-    transition: transform var(--transition-speed);
-    cursor: pointer;
+    @include hover-effect;
 }
 
 .hover-grow:hover {

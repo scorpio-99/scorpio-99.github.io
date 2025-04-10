@@ -1,0 +1,20 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hover-effect {
+  transition: transform $transition-speed;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+@mixin card-style {
+  background: $color-overlay;
+  border-radius: $border-radius-md;
+  padding: $spacing-lg;
+}

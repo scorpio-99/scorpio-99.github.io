@@ -14,7 +14,7 @@ This is a beautiful React application that celebrates a relationship journey, sh
 - 📸 Photo gallery with lightbox and categories
 
 ## 🛠️ Technology Stack
-- **Frontend**: React, CSS3, JavaScript (ES6+)
+- **Frontend**: React, SCSS, JavaScript (ES6+)
 - **Deployment**: GitHub Pages
 
 ## 🚀 Getting Started
@@ -45,8 +45,12 @@ npm start
 To add your own photos to the gallery:
 
 1. Place your images in the `public/assets/gallery` folder
-2. Update the `galleryImages` array in `src/components/Gallery.js` with your image information
+2. Update the `galleryImages` array in `src/data/dats.json` with your image information
 3. Categorize your images as 'dates', 'trips', or 'special'
+4. Convert the images to 'webp' format to prevent perfomance issues
+    ```sh
+    node scripts/convert-images.js
+    ```
 
 ## 📝 Customization
 You can easily customize the application by modifying:
@@ -73,7 +77,7 @@ You can also deploy the application manually from your local environment:
 npm run deploy
 ```
 
-The deploy process uses the following npm scripts:
+The deployment process uses the following npm scripts:
 ```sh
 # Builds the application for production
 npm run predeploy

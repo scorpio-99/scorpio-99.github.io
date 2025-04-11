@@ -3,17 +3,14 @@ import { CELEBRATION_EMOJIS } from '../../data/constants';
 
 const ConfettiAnimation = ({ duration = 5000 }) => {
   const [confetti, setConfetti] = useState([]);
-  const [isActive, setIsActive] = useState(true);
 
   useEffect(() => {
-    const initialConfetti = Array.from({ length: 30 }, () => ({
+    const initialConfetti = Array.from({ length: 50 }, () => ({
       id: Math.random(),
       emoji: CELEBRATION_EMOJIS[Math.floor(Math.random() * CELEBRATION_EMOJIS.length)],
       left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
       animationDuration: `${1 + Math.random() * 3}s`,
-      animationDelay: `${Math.random() * 2}s`,
-      fontSize: `${1 + Math.random() * 2}rem`,
+      fontSize: `${0.75 + Math.random() * 1.5}rem`,
       rotation: `${Math.random() * 360}deg`
     }));
 
@@ -29,10 +26,10 @@ const ConfettiAnimation = ({ duration = 5000 }) => {
           style={{
             position: 'absolute',
             left: item.left,
-            top: item.top,
-            fontSize: item.fontSize,
+            top: 0,
+            fontSize: `${0.75 + Math.random() * 1.5}rem`,
             transform: `rotate(${item.rotation})`,
-            animation: `fall ${item.animationDuration} ease-in-out ${item.animationDelay} infinite`
+            animation: `fall ${item.animationDuration} ease-in-out infinite`
           }}
         >
           {item.emoji}

@@ -13,12 +13,15 @@ export const ANIMATION_SETTINGS = {
 // Emojis and symbols
 export const CELEBRATION_EMOJIS = [
     // hearts
-    '❤️', '💖', '💝', '💕', '💌',
+    '❤️', '💖', '💝', '💕', '💌', '💗', '💓', '💞', '🫶',
     // party
-    '🎉', '🎊', '🎈',
-    // various
-    '💫', '✨', '🐢', '🍓'
+    '🎉', '🎊', '🎈', '🥳', '🪅','🎁', '🪩',
+    // stars & sparkles
+    '💫', '✨', '🌟', '⭐️',
+    // animals
+    '🐢', '🐰', '🍓', '🍬'
 ];
+
 
 // Day milestones to celebrate
 export const DAY_MILESTONES = [

@@ -1,5 +1,5 @@
-import React from 'react';
-import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
+import React, { useEffect } from 'react';
+import { MapContainer, TileLayer, ZoomControl, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -14,12 +14,27 @@ const customIcon = L.icon({
   shadowSize: [41, 41]
 });
 
-function Map({ places, center, zoom }) {
+function MapUpdater({ selectedPlace }) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (selectedPlace) {
+      map.flyTo(selectedPlace.coordinates, 12, {
+        duration: 1.5,
+        easeLinearity: 0.25
+      });
+    }
+  }, [selectedPlace, map]);
+
+  return null;
+}
+
+function Map({ places, center, zoom, onMarkerClick, selectedPlace }) {
   return (
     <MapContainer
       center={center}
       zoom={zoom}
-      scrollWheelZoom={false}
+      scrollWheelZoom={true}
       id="map"
       zoomControl={false}
     >
@@ -29,12 +44,15 @@ function Map({ places, center, zoom }) {
         maxZoom={19}
       />
       <ZoomControl position="topright" />
+      <MapUpdater selectedPlace={selectedPlace} />
 
       {places.map((place, index) => (
         <MapMarker 
           key={index}
           place={place}
           icon={customIcon}
+          onMarkerClick={() => onMarkerClick(place)}
+          isSelected={selectedPlace === place}
         />
       ))}
     </MapContainer>

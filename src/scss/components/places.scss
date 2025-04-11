@@ -2,10 +2,60 @@
 @import '../utils/mixins';
 
 .our-places {
-    #map {
-        height: $map-height;
+    .places-container {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: $spacing-md;
+        height: calc(#{$map-height} + 100px);
+    }
+
+    .places-sidebar {
         border-radius: $border-radius-md;
         box-shadow: $shadow-default;
+        overflow: hidden;
+    }
+
+    .places-list {
+        height: 100%;
+        overflow-y: auto;
+        padding: $spacing-sm;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgba($color-primary, 0.2);
+            border-radius: 3px;
+        }
+    }
+
+    .place-item {
+        padding: $spacing-sm;
+        border-radius: $border-radius-sm;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: $spacing-xs;
+
+        &:hover, &.active {
+            background: rgba($color-primary, 0.1);
+        }
+
+        .place-name {
+            color: $color-primary;
+        }
+
+        .place-date {
+            font-size: 0.85rem;
+        }
+    }
+
+    .places-map {
+        #map {
+            height: 100%;
+            border-radius: $border-radius-md;
+            box-shadow: $shadow-default;
+        }
     }
 }
 
@@ -13,24 +63,21 @@
 .place-popup {
     @include flex-column;
     align-items: center;
-}
+    padding: $spacing-xs;
+    
+    .place-name {
+        color: $color-primary;
+        font-weight: bold;
+        margin-bottom: $spacing-xs;
+    }
 
-.place-popup .place-name {
-    color: $color-primary;
-    font-weight: bold;
-    margin-bottom: $spacing-xs;
-}
+    .place-date {
+        color: $color-text-secondary;
+    }
 
-.place-popup .place-date {
-    color: $color-text-secondary;
-}
-
-.place-popup .place-description {
-    margin-top: $spacing-sm;
-}
-
-.place-popup .places-embed-image {
-    height: 100px;
+    .place-description {
+        margin-top: $spacing-sm;
+    }
 }
 
 /* Map controls */
@@ -44,9 +91,19 @@
         border-radius: $border-radius-sm !important;
         margin-bottom: $spacing-xs !important;
         box-shadow: $shadow-default !important;
+        transition: all 0.3s ease !important;
+
+        &:hover {
+            background: $color-primary !important;
+
+            span {
+                color: white !important;
+            }
+        }
 
         span {
             color: $color-primary;
+            transition: color 0.3s ease;
         }
     }
 }

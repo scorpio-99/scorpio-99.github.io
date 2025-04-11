@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Marker, Popup } from 'react-leaflet';
 
-function MapMarker({ place, icon }) {
+function MapMarker({ place, icon, onMarkerClick, isSelected }) {
+  const markerRef = useRef(null);
+
+  useEffect(() => {
+    if (isSelected) {
+      markerRef.current?.openPopup();
+    }
+  }, [isSelected]);
+
   return (
     <Marker
+      ref={markerRef}
       position={place.coordinates}
       icon={icon}
+      eventHandlers={{
+        click: () => {
+          onMarkerClick(place);
+        }
+      }}
     >
       <Popup maxWidth={300} minWidth={200}>
         <div className="place-popup">

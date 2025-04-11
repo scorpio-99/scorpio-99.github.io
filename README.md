@@ -3,7 +3,7 @@
 This is a beautiful React application that celebrates a relationship journey, showcasing memories, milestones, and special moments between Luca & Thuy.
 
 ## 🚀 Live Demo
-- Check it out here: [scorpio-99.github.io](https://scorpio-99.github.io)
+- Check it out here: [amore.lmeli.com](https://amore.lmeli.com)
 
 ## ✨ Features
 - ⚛️ Built with React 18

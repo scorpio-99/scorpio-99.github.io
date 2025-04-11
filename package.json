@@ -1,7 +1,7 @@
 {
   "name": "amore",
   "version": "1.0.0",
-  "homepage": ".",
+  "homepage": "https://amore.lmeli.com",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.11.0",

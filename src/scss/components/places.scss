@@ -42,7 +42,7 @@
         padding: $spacing-sm;
         border-radius: $border-radius-sm;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all $transition-speed ease;
         margin-bottom: $spacing-xs;
 
         &:hover, &.active {
@@ -103,19 +103,19 @@
         border-radius: $border-radius-sm !important;
         margin-bottom: $spacing-xs !important;
         box-shadow: $shadow-default !important;
-        transition: all 0.3s ease !important;
+        transition: all $transition-speed ease !important;
 
         &:hover {
             background: $color-primary !important;
 
             span {
-                color: white !important;
+                color: $color-white !important;
             }
         }
 
         span {
             color: $color-primary;
-            transition: color 0.3s ease;
+            transition: color $transition-speed ease;
         }
     }
 }

@@ -7,12 +7,21 @@
         grid-template-columns: 1fr 300px;
         gap: $spacing-md;
         height: calc(#{$map-height} + 100px);
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
     }
 
     .places-sidebar {
         border-radius: $border-radius-md;
         box-shadow: $shadow-default;
         overflow: hidden;
+
+        @include mobile {
+            height: 200px;
+        }
     }
 
     .places-list {
@@ -26,7 +35,6 @@
 
         &::-webkit-scrollbar-thumb {
             background: rgba($color-primary, 0.2);
-            border-radius: 3px;
         }
     }
 
@@ -55,6 +63,10 @@
             height: 100%;
             border-radius: $border-radius-md;
             box-shadow: $shadow-default;
+
+            @include mobile {
+                height: $map-height;
+            }
         }
     }
 }

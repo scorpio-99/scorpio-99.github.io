@@ -16,18 +16,9 @@ const ConfettiAnimation = ({ duration = 5000 }) => {
       fontSize: `${1 + Math.random() * 2}rem`,
       rotation: `${Math.random() * 360}deg`
     }));
-    
+
     setConfetti(initialConfetti);
-
-    // Set timeout to remove confetti after duration
-    const timer = setTimeout(() => {
-      setIsActive(false);
-    }, duration);
-
-    return () => clearTimeout(timer);
   }, [duration]);
-
-  if (!isActive) return null;
 
   return (
     <div className="confetti-container">
@@ -47,29 +38,6 @@ const ConfettiAnimation = ({ duration = 5000 }) => {
           {item.emoji}
         </div>
       ))}
-      <style jsx>{`
-        .confetti-container {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          pointer-events: none;
-          overflow: hidden;
-          z-index: 10;
-        }
-        
-        @keyframes fall {
-          0% {
-            transform: translateY(-100%) rotate(0deg);
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(100vh) rotate(360deg);
-            opacity: 0;
-          }
-        }
-      `}</style>
     </div>
   );
 };

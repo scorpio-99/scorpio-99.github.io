@@ -34,6 +34,9 @@ jobs:
       - name: Use personal access token for authentication
         run: git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/${{ github.repository }}.git
 
+      - name: Add CNAME file
+        run: echo "${{ secrets.CNAME_DOMAIN }}" > build/CNAME
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:

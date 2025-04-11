@@ -5,7 +5,6 @@
     .places-container {
         display: grid;
         grid-template-columns: 1fr 300px;
-        gap: $spacing-md;
         height: calc(#{$map-height} + 100px);
 
         @include mobile {
@@ -15,12 +14,13 @@
     }
 
     .places-sidebar {
-        border-radius: $border-radius-md;
+        border-radius: 0 $border-radius-md $border-radius-md 0;
         box-shadow: $shadow-default;
         overflow: hidden;
 
         @include mobile {
             height: 200px;
+            border-radius: 0 0 $border-radius-md $border-radius-md;
         }
     }
 
@@ -61,11 +61,12 @@
     .places-map {
         #map {
             height: 100%;
-            border-radius: $border-radius-md;
+            border-radius: $border-radius-md 0 0 $border-radius-md;
             box-shadow: $shadow-default;
 
             @include mobile {
                 height: $map-height;
+                border-radius: $border-radius-md $border-radius-md 0 0;
             }
         }
     }

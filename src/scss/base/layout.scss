@@ -15,24 +15,15 @@ body {
 }
 
 #root {
-    margin: $spacing-xl;
-    box-shadow: $shadow-default;
-    width: 100%;
     max-width: $content-width;
-    background: $color-overlay;
-    border-radius: $border-radius-md;
-
-    @include mobile {
-        margin: 0 !important;
-    }
 }
 
 .container {
-    padding: $spacing-xl;
+    padding: $spacing-xxl;
 
     > div {
         &:not(:last-child) {
-            margin-bottom: $spacing-xl;
+            margin-bottom: $spacing-xxl;
         }
     }
 }

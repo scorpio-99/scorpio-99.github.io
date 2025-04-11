@@ -41,18 +41,6 @@
   }
 }
 
-@mixin tablet {
-  @media (min-width: ($breakpoint-mobile + 1)) and (max-width: $breakpoint-tablet) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: ($breakpoint-tablet + 1)) {
-    @content;
-  }
-}
-
 // Typography
 @mixin title-text {
   font-size: 3rem;

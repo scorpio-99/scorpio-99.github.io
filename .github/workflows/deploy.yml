@@ -38,6 +38,6 @@ jobs:
         run: echo "${{ secrets.CNAME_DOMAIN }}" > build/CNAME
 
       - name: Deploy to GitHub Pages
-        run: npm run deploy
+        run: npm run deploy-gh-pages
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}

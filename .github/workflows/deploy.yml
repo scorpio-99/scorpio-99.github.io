@@ -38,3 +38,4 @@ jobs:
         run: npm run deploy
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+

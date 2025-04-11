@@ -32,7 +32,7 @@ function Gallery() {
     };
 
     const navigateImage = (direction) => {
-        const filteredImages = images.filter(img => img.category === activeCategory);
+        const filteredImages = images.filter(img => img.category === activeCategory).reverse();
         if (filteredImages.length === 0) return;
 
         const categoryIndex = filteredImages.findIndex(img => img.id === activeImage.id);
